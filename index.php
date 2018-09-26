@@ -36,9 +36,9 @@
 						<h2>Menu</h2>
 						<ul>
                                                     <li><a href="index.php">Home</a></li>
-							<li><a href="test.php">Ipsum veroeros</a></li>
-                                                        <li><a href="test.php">Tempus etiam</a></li>
-							<li><a href="test.php">Consequat dolor</a></li>
+							<li><a href="test.php">Edu</a></li>
+                                                        <li><a href="test.php">Skippy</a></li>
+							<li><a href="test.php">Robä</a></li>
 							<li><a href="elements.php">Elements</a></li>
 						</ul>
 					</nav>
