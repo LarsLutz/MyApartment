@@ -67,6 +67,8 @@ input, select, textarea {
 	appearance: none;
 }
 
+
+
 /* Basic */
 
 	@-ms-viewport {
@@ -111,7 +113,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #585858;
+		color: #333333;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
@@ -3292,7 +3294,10 @@ input, select, textarea {
 		max-width: 68em;
 		margin: 0 auto;
 		padding: 0 2.5em;
+                
 	}
+        
+        
 
 		@media screen and (max-width: 736px) {
 
@@ -3301,3 +3306,22 @@ input, select, textarea {
 			}
 
 		}
+
+.loginbox {
+            
+                max-width: 46em;
+                width: 100%;
+                height: 25em;
+                background-color:  rgba(255,255,255, .9);
+                border-radius: 3px 15px 5px 30px;
+                -moz-border-radius:3px 15px 5px 30px;
+                -webkit-border-radius:3px 15px 5px 30px;
+                box-shadow: 1px 3px 6px rgba(255,255,255,.9);
+                box-shadow: inset 0 0 300px 40px rgba(200,200,200, .9);
+                 -moz-box-shadow: inset 0 0 300px 40px rgba(200,200,200, .9);
+                -webkit-box-shadow: inset 0 0 300px 40px rgba(200,200,200, .9);
+             
+        }                
+   
+        
+   
