@@ -35,6 +35,10 @@
                                                     <div class=" loginbox">
                                                       <input type="text" name="loginname" id="loginname" value="" placeholder="Loginname" />
                                                       <input type="password" name="password" id="passwordname" value="" placeholder="Passwort" />
+                                                      <input type="checkbox" id="demo-copy" name="demo-copy">
+                                                        <label for="demo-copy">Autologin</label>
+                                                        <input type="submit" value="Login!" class="primary" />
+							<input type="reset" value="Reset" />
                                                     </div>
 						</div>
 					</div>
