@@ -42,8 +42,8 @@ include "autologout.php";
                                                     <li><a href="index.php">Home</a></li>
 							<li><a href="test.php">Edu</a></li>
                                                         <li><a href="test.php">Skippy</a></li>
-							<li><a href="test.php">Robä</a></li>
 							<li><a href="elements.php">Elements</a></li>
+                                                        <li><a href="userconf.php">Einstellungen</a></li>
                                                         <li><a href="logout.php"><b>Logout</b></a></li>
 						</ul>
 					</nav>

@@ -32,16 +32,24 @@
 						<div class="inner">
                                                     <h1>Login fehlgeschlagen</h1>
                                                         
-                                                    <div class=" loginbox">
+                                                    <div class="loginboxfail">
                                                       <form name="login" action="login.php" method="post">
                                                         <label for="autologin" font-color="red"><b>Username oder Passwort sind falsch!</b></label>
-                                                        <input type="text" name="loginname" id="loginname" value="" placeholder="Loginname" tabindex="1" />
+                                                        <input type="text" name="username" id="loginname" value=""  placeholder="Loginname" tabindex="1" maxlength="32" />
+                                                        <br>
                                                         <input type="password" name="password" id="passwordname" value="" placeholder="Passwort" tabindex="2" />
-                                                        <input type="checkbox" id="demo-copy" name="demo-copy" tabindex="5">
-                                                        <label for="autologin"><b>Autologin</b></label>
-                                                        <input type="submit" value="Login!" class="primary" tabindex="3"/>
-							<input type="reset" value="Reset" tabindex="4" />
+                                                        <br>					
+                                                        <span class="loginbutton">
+                                                            <input type="submit" name="submit" value="Login!" class="primary" tabindex="3"/>
+                                                            <input type="reset" value="Reset" tabindex="4" />
+                                                        </span>
+                                                        <span class="logincheckbox">
+                                                            <input type="checkbox" id="autologin" name="autologin">
+                                                            <label for="autologin"><b>Autologin</b></label>
+                                                        </span>	
                                                       </form>
+                                                        <span class="loginlink"><a href="pwneu.php">Paswort vergessen</a></span>
+                                                        <span class="loginlink"><a href="registrieren.php"><b>Registrieren</b></a></span>
                                                     </div>
 						</div>
 					</div>
