@@ -1,5 +1,9 @@
+<?php
+include "isuser.php";
+include 'db.php';
+include "autologout.php";
+ ?>
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>MyApartment</title>
@@ -40,6 +44,7 @@
                                                         <li><a href="test.php">Skippy</a></li>
 							<li><a href="test.php">Robä</a></li>
 							<li><a href="elements.php">Elements</a></li>
+                                                        <li><a href="logout.php"><b>Logout</b></a></li>
 						</ul>
 					</nav>
 
@@ -168,3 +173,7 @@
 
 	</body>
 </html>
+
+<?php
+include_once 'dbclose.php';
+?>

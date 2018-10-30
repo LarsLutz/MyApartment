@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-            <title>Login</title>
+            <title>Login felgeschlagen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -30,25 +30,18 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-                                                    <h1>Herzlich willkommen auf <b>MyApartment</b></h1>
+                                                    <h1>Login fehlgeschlagen</h1>
                                                         
                                                     <div class=" loginbox">
                                                       <form name="login" action="login.php" method="post">
-                                                          <input type="text" name="username" id="loginname" value=""  placeholder="Loginname" tabindex="1" maxlength="32" />
-                                                        <br>
+                                                        <label for="autologin" font-color="red"><b>Username oder Passwort sind falsch!</b></label>
+                                                        <input type="text" name="loginname" id="loginname" value="" placeholder="Loginname" tabindex="1" />
                                                         <input type="password" name="password" id="passwordname" value="" placeholder="Passwort" tabindex="2" />
-                                                        <br>					
-                                                        <span class="loginbutton">
-                                                            <input type="submit" name="submit" value="Login!" class="primary" tabindex="3"/>
-                                                            <input type="reset" value="Reset" tabindex="4" />
-                                                        </span>
-                                                        <span class="logincheckbox">
-                                                            <input type="checkbox" id="autologin" name="autologin">
-                                                            <label for="autologin"><b>Autologin</b></label>
-                                                        </span>	
+                                                        <input type="checkbox" id="demo-copy" name="demo-copy" tabindex="5">
+                                                        <label for="autologin"><b>Autologin</b></label>
+                                                        <input type="submit" value="Login!" class="primary" tabindex="3"/>
+							<input type="reset" value="Reset" tabindex="4" />
                                                       </form>
-                                                        <span class="loginlink"><a href="pwneu.php">Paswort vergessen</a></span>
-                                                        <span class="loginlink"><a href="registrieren.php"><b>Registrieren</b></a></span>
                                                     </div>
 						</div>
 					</div>
@@ -93,3 +86,4 @@
 
 	</body>
 </html>
+

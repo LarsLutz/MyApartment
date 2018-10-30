@@ -1,8 +1,11 @@
-<!DOCTYPE HTML>
 
+<?php
+include_once 'autopw.php';
+?>
+<!DOCTYPE HTML>
 <html>
 	<head>
-            <title>Login</title>
+            <title>Passwort neu setzen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,11 +21,8 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-                                                                    <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Login MyApartment</span>
+                                                                    <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Neues Passwort anfordern</span>
 								</a>
-
-							
-
 						</div>
 					</header>
 
@@ -30,25 +30,18 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-                                                    <h1>Herzlich willkommen auf <b>MyApartment</b></h1>
+                                                    <h1>Bitte geben sie ihre E-Mail Adresse an</h1>
                                                         
-                                                    <div class=" loginbox">
-                                                      <form name="login" action="login.php" method="post">
-                                                          <input type="text" name="username" id="loginname" value=""  placeholder="Loginname" tabindex="1" maxlength="32" />
-                                                        <br>
-                                                        <input type="password" name="password" id="passwordname" value="" placeholder="Passwort" tabindex="2" />
-                                                        <br>					
+                                                    <div class=" pwneubox">
+                                                      <form name="pwneu" action="autopw.php" method="post">
+                                                          <input type="text" name="pwemail" id="pwemail" value=""  placeholder="Ihre E-Mail Adresse" tabindex="1" maxlength="64" />
+                                                          <br>
                                                         <span class="loginbutton">
-                                                            <input type="submit" name="submit" value="Login!" class="primary" tabindex="3"/>
+                                                            <input type="submit" name="submit" value="Senden" class="primary" tabindex="3"/>
                                                             <input type="reset" value="Reset" tabindex="4" />
                                                         </span>
-                                                        <span class="logincheckbox">
-                                                            <input type="checkbox" id="autologin" name="autologin">
-                                                            <label for="autologin"><b>Autologin</b></label>
-                                                        </span>	
                                                       </form>
-                                                        <span class="loginlink"><a href="pwneu.php">Paswort vergessen</a></span>
-                                                        <span class="loginlink"><a href="registrieren.php"><b>Registrieren</b></a></span>
+                                                        <span class="loginlink"><a href="index.php"><b>Abbrechen</b></a></span>
                                                     </div>
 						</div>
 					</div>
@@ -93,3 +86,4 @@
 
 	</body>
 </html>
+
