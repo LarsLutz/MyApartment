@@ -67,7 +67,7 @@ include "autologout.php";
 										<img src="images/pic01.jpg" alt="" />
 									</span>
 									<a href="test.php">
-										<h2>Magna</h2>
+										<h2>Mieterspiegel</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
 										</div>
@@ -111,7 +111,7 @@ include "autologout.php";
 										<img src="images/pic05.jpg" alt="" />
 									</span>
 									<a href="test.php">
-										<h2>Aliquam</h2>
+										<h2>Hausordnung</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
 										</div>
