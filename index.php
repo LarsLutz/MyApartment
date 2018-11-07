@@ -77,8 +77,8 @@ include "autologout.php";
 									<span class="image">
 										<img src="images/pic02.jpg" alt="" />
 									</span>
-									<a href="test.php">
-										<h2>Lorem</h2>
+									<a href="nebenkosten.php">
+										<h2>Nebenkosten</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
 										</div>
@@ -99,8 +99,8 @@ include "autologout.php";
 									<span class="image">
 										<img src="images/pic04.jpg" alt="" />
 									</span>
-									<a href="test.php">
-										<h2>Tempus</h2>
+                                                                    <a href="mietrechnung.php.php">
+										<h2>Mietrechnung</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
 										</div>
