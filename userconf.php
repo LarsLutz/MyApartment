@@ -1,3 +1,9 @@
+<?php
+include "isuser.php";
+include 'db.php';
+include "autologout.php";
+ ?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -18,7 +24,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Porfil Einstellungen</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Profil Einstellungen</span>
 								</a>
 
 							<!-- Nav -->
@@ -50,7 +56,19 @@
 							<h1>Einstellungen</h1>
                                                         
                                                     <div class="confbox1">
-                                                      <form name="login" action="login.php" method="post">
+                                                        <form name="login" action="pwchange.php" method="post">
+                                                          <?php include_once 'pwchange.php'; ?>
+                                                      </form>
+                                                        
+                                                    </div>
+                                                        
+                                                         <div class="confbox2">
+                                                      <form name="login" action="" method="post">
+                                                        
+                                                    </div>
+                                                        
+                                                         <div class="confbox3">
+                                                      <form name="login" action="" method="post">
                                                         
                                                     </div>
 						</div>
@@ -107,3 +125,6 @@
 	</body>
 </html>
 
+<?php
+include_once 'dbclose.php';
+?>

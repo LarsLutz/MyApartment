@@ -13,7 +13,7 @@
     // Session starten
     session_start();
    
-	function doLogin($ID, $Autologin=false)
+	function doLogin($ID, $Autologin)
     {
             include_once 'db.php';
         // Die aktuelle SessionID wird in der DB gespeichert.
