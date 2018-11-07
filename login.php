@@ -61,6 +61,7 @@
         $row = mysqli_fetch_assoc($result);
         $_SESSION['UserID'] = $ID;
         $_SESSION['username'] = $row['username'];
+        $_SESSION['ErrorMSG']= "";
     }
 
    

@@ -57,7 +57,16 @@ include "autologout.php";
                                                         
                                                     <div class="confbox1">
                                                         <form name="login" action="pwchange.php" method="post">
-                                                          <?php include_once 'pwchange.php'; ?>
+                                                          <h2>Passwort &auml;ndern</h2>
+                                                          <label><?php echo $_SESSION['ErrorMSG']; ?></label>
+                                                          <input type="password" name="passwordold" id="passwordold" value="" placeholder="Altes Passwort" tabindex="1" />
+                                                          <input type="password" name="passwordnew" id="passwordnew" value="" placeholder="Neues Passwort" tabindex="2" />
+                                                          <input type="password" name="passwordnewag" id="passwordnewag" value="" placeholder="Neues Passwort wiederholen" tabindex="3" />
+                                                          <br>
+                                                          <span class="loginbutton">
+                                                              <input type="submit" name="pwok" value="Ok" class="primary" tabindex="4"/>
+                                                              <input type="reset" value="Abbrechen" tabindex="4" />
+                                                          </span>
                                                       </form>
                                                         
                                                     </div>
