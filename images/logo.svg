@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="149.167px" height="172.243px" viewBox="0 0 149.167 172.243" enable-background="new 0 0 149.167 172.243"
-	 xml:space="preserve">
-<polygon fill="#585858" points="149.167,129.183 74.583,172.243 0,129.183 0,43.061 74.583,0 149.167,43.061 "/>
-<path fill="#FFFFFF" d="M41.88,84.75l25.09,26.783L54.889,84.75H41.88z M74.583,115.841L88.64,84.75H60.527L74.583,115.841z
-	 M55.009,79.594l8.217-15.466H52.673l-11.6,15.466H55.009z M82.196,111.533l25.091-26.783h-13.01L82.196,111.533z M60.849,79.594
-	h27.469l-8.217-15.466H69.065L60.849,79.594z M94.157,79.594h13.936L96.494,64.128H85.942L94.157,79.594z M99.835,60.02
-	l15.467,20.621c0.376,0.483,0.55,1.04,0.523,1.671c-0.027,0.632-0.257,1.174-0.686,1.632l-38.664,41.243
-	c-0.483,0.536-1.113,0.804-1.893,0.804c-0.778,0-1.408-0.268-1.892-0.804L34.026,83.944c-0.429-0.457-0.658-1-0.685-1.632
-	c-0.027-0.631,0.147-1.188,0.523-1.671L49.331,60.02c0.484-0.699,1.168-1.047,2.054-1.047h46.398
-	C98.667,58.973,99.353,59.322,99.835,60.02z"/>
+<svg width="149.167" height="172.243" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <polygon id="svg_1" points="149.167,129.183 74.583,172.243 0,129.183 0,43.061 74.583,0 149.167,43.061 " fill="#585858"/>
+  <path id="svg_2" d="m41.88,84.75l25.09,26.783l-12.081,-26.783l-13.009,0zm32.703,31.091l14.057,-31.091l-28.113,0l14.056,31.091zm-19.574,-36.247l8.217,-15.466l-10.553,0l-11.6,15.466l13.936,0zm27.187,31.939l25.091,-26.783l-13.01,0l-12.081,26.783zm-21.347,-31.939l27.469,0l-8.217,-15.466l-11.036,0l-8.216,15.466zm33.308,0l13.936,0l-11.599,-15.466l-10.552,0l8.215,15.466zm5.678,-19.574l15.467,20.621c0.376,0.483 0.55,1.04 0.523,1.671c-0.027,0.632 -0.257,1.174 -0.686,1.632l-38.664,41.243c-0.483,0.536 -1.113,0.804 -1.893,0.804c-0.778,0 -1.408,-0.268 -1.892,-0.804l-38.664,-41.243c-0.429,-0.457 -0.658,-1 -0.685,-1.632c-0.027,-0.631 0.147,-1.188 0.523,-1.671l15.467,-20.621c0.484,-0.699 1.168,-1.047 2.054,-1.047l46.398,0c0.884,0 1.57,0.349 2.052,1.047z" fill="#FFFFFF"/>
+  <rect id="svg_3" height="77" width="97" y="49.959006" x="26.083496" stroke-width="0" stroke="#000" fill="#585858"/>
+  <rect stroke="#ffffff" id="svg_7" height="74" width="74" y="56.959006" x="37.5835" stroke-width="5" fill="none"/>
+  <line transform="rotate(-46 102.04174804687501,45.99999999999999) " stroke="#ffffff" stroke-linecap="null" stroke-linejoin="null" id="svg_9" y2="86" x2="102.083496" y1="6" x1="102" stroke-width="5" fill="none"/>
+  <line transform="rotate(46 45.5,48) " stroke="#ffffff" stroke-linecap="null" stroke-linejoin="null" id="svg_10" y2="88" x2="45" y1="8" x1="46" stroke-width="5" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_11" y2="129.959006" x2="38.083496" y1="59.959006" x1="110.083496" fill-opacity="null" stroke-opacity="null" stroke-width="5" stroke="#ffffff" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_12" y2="129.959006" x2="110.083496" y1="59.959006" x1="39.083496" fill-opacity="null" stroke-opacity="null" stroke-width="5" stroke="#ffffff" fill="none"/>
+ </g>
 </svg>
