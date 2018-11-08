@@ -86,6 +86,15 @@ include "autologout.php";
                                                         
                                                          <div class="confbox3">
                                                       <form name="login" action="" method="post">
+                                                          <h2>Username &auml;ndern</h2>
+                                                                <label><?php echo $_SESSION['ErrorMSG3']; ?></label>
+                                                                <input type="text" name="newname" id="newname" value="" placeholder="Neuer Username" tabindex="1" />
+                                                                <br>
+                                                                <span class="loginbutton">
+                                                                    <input type="submit" name="nameok" value="Ok" class="primary" tabindex="2"/>
+                                                                    <input type="reset" value="Abbrechen" tabindex="3" />
+                                                                </span>
+                                                      </form>
                                                         
                                                     </div>
 						</div>
@@ -145,5 +154,6 @@ include "autologout.php";
 <?php
 include_once 'dbclose.php';
 $_SESSION['ErrorMSG1']="";
+$_SESSION['ErrorMSG2']="";
 $_SESSION['ErrorMSG2']="";
 ?>

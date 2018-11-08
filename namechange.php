@@ -1,31 +1,32 @@
 <?php
+
 include_once 'db.php';
 
     
 	
-        if(isset($_POST['mailok']) AND $_POST['mailok']=='Ok'){
+        if(isset($_POST['nameok']) AND $_POST['nameok']=='Ok'){
             session_start();
             $msg="";
             $errors = array();
             // Pruefen, ob alle Formularfelder vorhanden sind
-            if(!isset($_POST['newemail'])){
+            if(!isset($_POST['newname'])){
                 
                 $errors = "Bitte fuellen sie alle Formularfelder aus.";
                 $msg= $msg." Bitte fuellen sie alle Formularfelder aus. \n";
             }
             else{
-                $emails = array();
+                $names = array();
                 $sql = "SELECT
-                               email
+                               username
                         FROM
                                user
                        ";
                 $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
                 while($row = mysqli_fetch_assoc($result))
-                    $emails[] = $row['email'];
+                    $names[] = $row['username'];
                 // momentane Email-Adresse ausfiltern
                 $sql = "SELECT
-                               email
+                               username
                         FROM
                                user
                         WHERE
@@ -34,25 +35,25 @@ include_once 'db.php';
                 $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
                 $row = mysqli_fetch_assoc($result);
 
-                if(trim($_POST['newemail'])==''){
+                if(trim($_POST['newname'])==''){
                     $errors[]= "Bitte geben Sie Ihre Email-Adresse ein.";
-                    $msg= $msg." Bitte geben Sie Ihre Email-Adresse ein. \n";
+                    $msg= $msg." Bitte geben Sie Ihren neuen Usernamen ein. \n";
                 }
-                elseif(!preg_match('?^[\w\.-]+@[\w\.-]+\.[\w]{2,4}$?', trim($_POST['newemail']))){
-                    $errors[]= "Die Syntax Ihrer E-Mail Adresse ist falsch.";
-                    $msg= $msg." Die Syntax Ihrer E-Mail Adresse ist falsch. \n";
+                elseif(!preg_match('?^[\w\.-]+@[\w\.-]+\.[\w]{2,4}$?', trim($_POST['newname']))){
+                    $errors[]= "Sie verwenden ungültige Sonderzeichen.";
+                    $msg= $msg." Sie verwenden ungültige Sonderzeichen. \n";
                 }
-                elseif(in_array(trim($_POST['newemail']), $emails) AND trim($_POST['newemail'])!= $row['email']){
-                    $errors[]= "Diese Email-Adresse ist bereits vergeben.";
-                    $msg= $msg." Diese Email-Adresse ist bereits vergeben. \n";
+                elseif(in_array(trim($_POST['newname']), $names) AND trim($_POST['newname'])!= $row['username']){
+                    $errors[]= "Dieser Username ist bereits vergeben.";
+                    $msg= $msg." Dieser Username ist bereits vergeben. \n";
                     
                 }
                 }
                 if(count($errors)){
                     
-                  echo "Ihre E-Mail konnte nicht gespeichert werden. \n";
-                $msg= $msg." Ihre E-Mail konnte nicht gespeichert werden..";
-                $_SESSION['ErrorMSG2']=$msg;
+                  echo "Ihr Username konnte nicht gespeichert werden. \n";
+                $msg= $msg." Ihr Username konnte nicht gespeichert werden..";
+                $_SESSION['ErrorMSG3']=$msg;
                 
                  foreach($errors as $error)
                      echo $error."faeheler";
@@ -60,17 +61,17 @@ include_once 'db.php';
                 header("location: userconf.php");               
                 }
                 else{
-                    $mail= trim($_POST['newemail']);
+                    $name= trim($_POST['newname']);
                 $sql = "UPDATE
                                 user
                         SET
-                                email =  '".mysqli_real_escape_string($connid,$mail)."'
+                                username =  '".mysqli_real_escape_string($connid,$name)."'
                               
                         WHERE
                                 id = '".mysqli_real_escape_string($connid,$_SESSION['UserID'])."'
                        ";   
                 mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
-                header("location: userconf.php"); 
+                 //header("location: userconf.php"); 
                     
             }
         }
