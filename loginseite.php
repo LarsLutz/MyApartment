@@ -43,7 +43,7 @@
                                                             <input type="reset" value="Reset" tabindex="4" />
                                                         </span>
                                                         <span class="logincheckbox">
-                                                            <input type="checkbox" id="autologin" name="autologin">
+                                                            <input type="checkbox" id="autologin" name="autologin" value="ja">
                                                             <label for="autologin"><b>Autologin</b></label>
                                                         </span>	
                                                       </form>

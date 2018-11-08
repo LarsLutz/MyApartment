@@ -30,7 +30,7 @@
                 ";
         mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());        
         // Wenn 'autologin aktiviert wurde
-        if($Autologin){
+        if($Autologin=="ja"){
             // Zufallscode erzeugen
             $part_one = substr(time()-rand(100, 100000),5,10);
             $part_two = substr(time()-rand(100, 100000),-5);
@@ -61,7 +61,9 @@
         $row = mysqli_fetch_assoc($result);
         $_SESSION['UserID'] = $ID;
         $_SESSION['username'] = $row['username'];
-        $_SESSION['ErrorMSG']= "";
+        $_SESSION['ErrorMSG1']= "";
+        $_SESSION['ErrorMSG2']= "";
+        $_SESSION['ErrorMSG3']= "";
     }
 
    
@@ -85,13 +87,11 @@
             header("location: index.php"); 
         }
         else{ 
-            echo "fail";
  
 header("location: loginfail.php");
 }
 }
 
-echo 'ende';
 
 include_once 'dbclose.php';
 

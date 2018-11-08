@@ -23,28 +23,28 @@ if(isset($_POST['pwok']) AND $_POST['pwok'] == 'Ok') {
                       ))
             {
                 $errors[]= "Bitte füllen sie alle Felder aus.";
-                $msg= $msg." Bitte füllen sie alle Felder aus.";
+                $msg= $msg." Bitte füllen sie alle Felder aus. <br>";
             }
 
             else {
                 if(trim($row['passwort']) != md5(trim($_POST['passwordold'])))
                     $errors[]= "Ihr altes Passwort ist nicht korrekt.";
-                    $msg= $msg." Ihr altes Passwort ist nicht korrekt. ";
+                    $msg= $msg." Ihr altes Passwort ist nicht korrekt. <br>";
                 if(trim($_POST['passwordnew'])==""){
                     $errors[]= "Bitte geben Sie Ihr Passwort ein.";
-                    $msg= $msg." Bitte geben Sie Ihr neues Passwort ein. ";
+                    $msg= $msg." Bitte geben Sie Ihr neues Passwort ein. <br>";
                 }
                 elseif(strlen(trim($_POST['passwordnew'])) < 6){
                     $errors[]= "Ihr Passwort muss mindestens 6 Zeichen lang sein.";
-                    $msg= $msg." Ihr Passwort muss mindestens 6 Zeichen lang sein. ";
+                    $msg= $msg." Ihr Passwort muss mindestens 6 Zeichen lang sein. <br>";
                 }
                 if(trim($_POST['passwordnewag'])==""){
                     $errors[]= "Bitte wiederholen Sie Ihr Passwort.";
-                    $msg= $msg." Bitte wiederholen Sie Ihr Passwort.";
+                    $msg= $msg." Bitte wiederholen Sie Ihr Passwort. <br>";
                 }
                 elseif(trim($_POST['passwordnew']) != trim($_POST['passwordnewag'])){
                     $errors[]= "Ihre Passwortwiederholung war nicht korrekt.";
-                    $msg= $msg." Ihre Passwortwiederholung war nicht korrekt. ";
+                    $msg= $msg." Ihre Passwortwiederholung war nicht korrekt. <br>";
                 }
                 // Kontrolle des alten Passworts
                 
@@ -53,7 +53,7 @@ if(isset($_POST['pwok']) AND $_POST['pwok'] == 'Ok') {
                 echo "Ihr Passwort konnte nicht gespeichert werden.<br>\n".
                      "<br>\n";
                 $msg= $msg." Ihr Passwort konnte nicht gespeichert werden.";
-                $_SESSION['ErrorMSG']=$msg;
+                $_SESSION['ErrorMSG1']=$msg;
                 
                  foreach($errors as $error)
                      echo $error."faeheler";

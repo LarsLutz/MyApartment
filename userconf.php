@@ -56,9 +56,9 @@ include "autologout.php";
 							<h1>Einstellungen</h1>
                                                         
                                                     <div class="confbox1">
-                                                        <form name="login" action="pwchange.php" method="post">
+                                                        <form name="pwchange" action="pwchange.php" method="post">
                                                           <h2>Passwort &auml;ndern</h2>
-                                                          <label><?php echo $_SESSION['ErrorMSG']; ?></label>
+                                                          <label><?php echo $_SESSION['ErrorMSG1']; ?></label>
                                                           <input type="password" name="passwordold" id="passwordold" value="" placeholder="Altes Passwort" tabindex="1" />
                                                           <input type="password" name="passwordnew" id="passwordnew" value="" placeholder="Neues Passwort" tabindex="2" />
                                                           <input type="password" name="passwordnewag" id="passwordnewag" value="" placeholder="Neues Passwort wiederholen" tabindex="3" />
@@ -72,8 +72,16 @@ include "autologout.php";
                                                     </div>
                                                         
                                                          <div class="confbox2">
-                                                      <form name="login" action="" method="post">
-                                                        
+                                                             <form name="mailchange" action="mailchange.php" method="post">
+                                                                <h2>Email Adresse &auml;ndern</h2>
+                                                                <label><?php echo $_SESSION['ErrorMSG2']; ?></label>
+                                                                <input type="text" name="newemail" id="newemail" value="" placeholder="Neue Mail Adresse" tabindex="1" />
+                                                                <br>
+                                                                <span class="loginbutton">
+                                                                    <input type="submit" name="mailok" value="Ok" class="primary" tabindex="2"/>
+                                                                    <input type="reset" value="Abbrechen" tabindex="3" />
+                                                                </span>  
+                                                             </form>
                                                     </div>
                                                         
                                                          <div class="confbox3">
@@ -136,4 +144,6 @@ include "autologout.php";
 
 <?php
 include_once 'dbclose.php';
+$_SESSION['ErrorMSG1']="";
+$_SESSION['ErrorMSG2']="";
 ?>
