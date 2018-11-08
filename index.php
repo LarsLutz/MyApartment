@@ -80,7 +80,7 @@ include "autologout.php";
 									<a href="nebenkosten.php">
 										<h2>Nebenkosten</h2>
 										<div class="content">
-											<p>Übersicht zu den aktuellen und alten Nebenkosten/Heizkosten</p>
+											<p>Übersicht zu den aktuellen und alten Nebenkosten/Heizkosten.</p>
 										</div>
 									</a>
 								</article>
@@ -102,7 +102,7 @@ include "autologout.php";
                                                                     <a href="mietrechnung.php">
 										<h2>Mietrechnung</h2>
 										<div class="content">
-											<p>Übersicht zu den offenen und bezahlten Mietrechnungen</p>
+											<p>Übersicht zu den offenen und bezahlten Mietrechnungen.</p>
 										</div>
 									</a>
 								</article>
