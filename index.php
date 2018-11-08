@@ -99,7 +99,7 @@ include "autologout.php";
 									<span class="image">
 										<img src="images/pic04.jpg" alt="" />
 									</span>
-                                                                    <a href="mietrechnung.php.php">
+                                                                    <a href="mietrechnung.php">
 										<h2>Mietrechnung</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
