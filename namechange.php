@@ -39,7 +39,7 @@ include_once 'db.php';
                     $errors[]= "Bitte geben Sie Ihre Email-Adresse ein.";
                     $msg= $msg." Bitte geben Sie Ihren neuen Usernamen ein. \n";
                 }
-                elseif(!preg_match('?^[\w\.-]+@[\w\.-]+\.[\w]{2,4}$?', trim($_POST['newname']))){
+                elseif(!preg_match('/^[a-zA-ZäöüÄÖÜ]+$/', trim($_POST['newname']))){
                     $errors[]= "Sie verwenden ungültige Sonderzeichen.";
                     $msg= $msg." Sie verwenden ungültige Sonderzeichen. \n";
                 }
@@ -52,7 +52,7 @@ include_once 'db.php';
                 if(count($errors)){
                     
                   echo "Ihr Username konnte nicht gespeichert werden. \n";
-                $msg= $msg." Ihr Username konnte nicht gespeichert werden..";
+                $msg= $msg." Ihr Username konnte nicht gespeichert werden.";
                 $_SESSION['ErrorMSG3']=$msg;
                 
                  foreach($errors as $error)
@@ -71,7 +71,7 @@ include_once 'db.php';
                                 id = '".mysqli_real_escape_string($connid,$_SESSION['UserID'])."'
                        ";   
                 mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
-                 //header("location: userconf.php"); 
+                header("location: userconf.php"); 
                     
             }
         }

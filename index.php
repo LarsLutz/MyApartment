@@ -22,7 +22,7 @@ include "autologout.php";
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartement</span>
 								</a>
 
 							<!-- Nav -->
@@ -52,19 +52,12 @@ include "autologout.php";
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Das ist die Babo Webseite<br />
-								Gstalltet von Babos</h1>
-                                                                <p> Lars: Login und Registration sowie DB</p>
-                                                                <p> Robin: Statistik Datenauswertung</p>
-                                                                <p> Edu: Formular, Dokumente</p>
-                                                            
-                                                            
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+								<h1>Wilkommen auf MyApartment</h1>
 							</header>
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="images/pic09.jpg" alt="" />
 									</span>
                                                                     <a href="mieterspiegel.php">
 										<h2>Mieterspiegel</h2>
@@ -97,7 +90,7 @@ include "autologout.php";
 								</article>
 								<article class="style4">
 									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
+										<img src="images/pic08.jpg" alt="" />
 									</span>
                                                                     <a href="mietrechnung.php">
 										<h2>Mietrechnung</h2>
@@ -176,4 +169,7 @@ include "autologout.php";
 
 <?php
 include_once 'dbclose.php';
+$_SESSION['ErrorMSG1']="";
+$_SESSION['ErrorMSG2']="";
+$_SESSION['ErrorMSG3']="";
 ?>

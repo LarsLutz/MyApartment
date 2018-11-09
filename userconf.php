@@ -85,7 +85,7 @@ include "autologout.php";
                                                     </div>
                                                         
                                                          <div class="confbox3">
-                                                      <form name="login" action="" method="post">
+                                                             <form name="login" action="namechange.php" method="post">
                                                           <h2>Username &auml;ndern</h2>
                                                                 <label><?php echo $_SESSION['ErrorMSG3']; ?></label>
                                                                 <input type="text" name="newname" id="newname" value="" placeholder="Neuer Username" tabindex="1" />
@@ -155,5 +155,5 @@ include "autologout.php";
 include_once 'dbclose.php';
 $_SESSION['ErrorMSG1']="";
 $_SESSION['ErrorMSG2']="";
-$_SESSION['ErrorMSG2']="";
+$_SESSION['ErrorMSG3']="";
 ?>
