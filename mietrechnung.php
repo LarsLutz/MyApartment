@@ -1,3 +1,11 @@
+<?php
+include "isuser.php";
+include 'db.php';
+include "autologout.php";
+include "mietrechnung_sql.php"
+ ?>
+
+
 <!DOCTYPE HTML>
 
 <html>
@@ -49,6 +57,7 @@
                     <h1>Mietrechnung</h1>
                     <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
                     <div class="table-wrapper">
+                        
                         <table>
                             <thead>
                                 <tr>
@@ -61,14 +70,14 @@
                                 <tr>
                                     <td>Januar</td>
                                     <td>offen</td>
-                                    <td>29.99</td>
+                                    <td><?php echo $miete[] = $row['Miete']; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Februar</td>
                                     <td>bezahlt</td>
                                     <td>19.99</td>
                                 </tr>
-                               
+
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -131,3 +140,10 @@
 
     </body>
 </html>
+
+<?php
+include_once 'dbclose.php';
+$_SESSION['ErrorMSG1']="";
+$_SESSION['ErrorMSG2']="";
+$_SESSION['ErrorMSG3']="";
+?>
