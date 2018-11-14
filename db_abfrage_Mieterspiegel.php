@@ -54,30 +54,30 @@ include_once 'db.php';
                             <div>                            
                                 <?php
 
-                                  //  $abfrage="SELECT id FROM user";
-                                  // $ergebnis = mysqli_query($connid, $abfrage) or die(mysqli_error($link));
+                                    $abfrage="SELECT name FROM Personen";
+                                   $ergebnis = mysqli_query($connid, $abfrage) or die(mysqli_error($link));
 
                                                 // Tabellenkopf darstellen
-                                  //  echo "<table border = \"1\">";
-                                  //  $anzahl_spalten= mysqli_num_fields($ergebnis);
-                                  //  echo"<tr>";
-                                  //  for($i=0; $i<$anzahl_spalten;$i++)
-                                  //  {
-                                  //      $finfo= mysqli_fetch_field_direct($ergebnis,$i);
-                                   //     echo "<th>".$finfo->name."</th>";
-                                   // }
-                                  //  echo"</tr>";
+                                    echo "<table border = \"1\">";
+                                    $anzahl_spalten= mysqli_num_fields($ergebnis);
+                                    echo"<tr>";
+                                    for($i=0; $i<$anzahl_spalten;$i++)
+                                    {
+                                        $finfo= mysqli_fetch_field_direct($ergebnis,$i);
+                                       echo "<th>".$finfo->name."</th>";
+                                   }
+                                    echo"</tr>";
 
                                         // Rest der Tabelle in einer Schleife darstellen
-                                   // while($zeile= mysqli_fetch_assoc($ergebnis))
-                                   // {
-                                   //     echo "<tr>";
-                                      //  while(list($schlüssel, $wert)=each($zeile))
-                                     //   {
-                                      //      echo"<td>".$wert."</td>";
-                                      //  }
-                                      //  echo"</tr>";
-                                   // }
+                                   while($zeile= mysqli_fetch_assoc($ergebnis))
+                                    {
+                                        echo "<tr>";
+                                        while(list($schlüssel, $wert)=each($zeile))
+                                        {
+                                            echo"<td>".$wert."</td>";
+                                        }
+                                        echo"</tr>";
+                                   }
                                 ?>
                             </div>
 		</div>
