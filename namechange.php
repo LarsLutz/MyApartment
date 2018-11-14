@@ -51,7 +51,6 @@ include_once 'db.php';
                 }
                 if(count($errors)){
                     
-                  echo "Ihr Username konnte nicht gespeichert werden. \n";
                 $msg= $msg." Ihr Username konnte nicht gespeichert werden.";
                 $_SESSION['ErrorMSG3']=$msg;
                 

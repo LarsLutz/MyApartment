@@ -36,14 +36,16 @@
                                                         <form name="login" action="reg.php" method="post">
                                                           <input type="text" name="usernr" id="usernr" value=""  placeholder="Anmelde Nummer" tabindex="1" maxlength="8" />
                                                         <br>
-                                                        <input type="password" name="regpassword" id="regpassword" value="" placeholder="Passwort" tabindex="2" />
+                                                        <input type="text" name="regusername" id="regusername" value=""  placeholder="Username" tabindex="2" maxlength="32" />
                                                         <br>
-                                                        <input type="password" name="regpasswordag" id="regpasswordag" value="" placeholder="Passwort" tabindex="3" />
+                                                        <input type="password" name="regpassword" id="regpassword" value="" placeholder="Passwort" tabindex="3" />
                                                         <br>
-                                                        <input type="text" name="usermail" id="usermail" value=""  placeholder="E-Mail" tabindex="1" maxlength="64" tabindex="4" />
+                                                        <input type="password" name="regpasswordag" id="regpasswordag" value="" placeholder="Passwort" tabindex="4" />
+                                                        <br>
+                                                        <input type="text" name="regemail" id="regemail" value=""  placeholder="E-Mail" tabindex="1" maxlength="64" tabindex="5" />
                                                         <br>
                                                         <span class="loginbutton">
-                                                            <input type="submit" name="submit" value="Registrieren" class="primary" tabindex="5"/>
+                                                            <input type="submit" name="regok" value="Registrieren" class="primary" tabindex="5"/>
                                                             <input type="reset" value="Reset" tabindex="6" />
                                                         </span>
                                                       </form>
