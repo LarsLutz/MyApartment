@@ -12,13 +12,14 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
         $errors[] = "Bitte geben sie Ihre Daten ein.";
         $msg = $msg . "Bitte geben sie Ihre Usernummer ein.";
     } else {
+       $usrnmr= $_POST['usernr'];
 
         $sql = "SELECT      id
                         FROM
                                personen
                         WHERE
-                               idpersonen = '" . $_POST['usernr'] . "'
-                       ";
+                               idpersonen = '" .mysqli_real_escape_string($connid,$usrnmr)."'
+                ";
         $result = mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
         $row = mysqli_fetch_assoc($result);
 
@@ -27,7 +28,7 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
         if (trim($_POST['usernr']) == '') {
             $errors[] = "Bitte geben Sie Ihre Usernummer ein.";
             $msg = $msg .= "Bitte geben Sie Ihre Usernummer ein.";
-        } elseif (trim($_POST['pwemail']) != $row['email']) {
+        } elseif (trim($_POST['usernr']) != $row['idpersonen']) {
             $errors[] = "Diese UserID ist nicht vorhanden.";
             $msg = $msg .= "Diese UserID ist nicht vorhanden.";
         }
@@ -40,37 +41,33 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
         foreach ($errors as $error)
             echo $error . "faeheler";
         
-    } else {
+         header("location: registrieren.php"); 
+        
+    }
+    
+    else {
         $errors = array();
         // Pruefen, ob alle Formularfelder vorhanden sind
 
         $names = array();
-        $sql = "SELECT
-                               username
+        $sql = "SELECT  username
+            
                         FROM
                                user
                        ";
         $result = mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
         while ($row = mysqli_fetch_assoc($result))
             $names[] = $row['username'];
-        // momentane Email-Adresse ausfiltern
-        $sql = "SELECT
-                               username
-                        FROM
-                               user
-                        WHERE
-                               id = '" . mysqli_real_escape_string($connid, $_SESSION['UserID']) . "'
-                       ";
-        $result = mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
-        $row = mysqli_fetch_assoc($result);
+      
+        
 
-        if (trim($_POST['newname']) == '') {
-            $errors[] = "Bitte geben Sie Ihre Email-Adresse ein.";
+        if (trim($_POST['regusername']) == '') {
+            $errors[] = "Bitte geben Sie einen Usernamen ein.";
             $msg = $msg . " Bitte geben Sie Ihren neuen Usernamen ein. \n";
-        } elseif (!preg_match('/^[a-zA-ZäöüÄÖÜ]+$/', trim($_POST['newname']))) {
+        } elseif (!preg_match('/^[a-zA-ZäöüÄÖÜ]+$/', trim($_POST['regusername']))) {
             $errors[] = "Sie verwenden ungültige Sonderzeichen.";
             $msg = $msg . " Sie verwenden ungültige Sonderzeichen. \n";
-        } elseif (in_array(trim($_POST['newname']), $names) AND trim($_POST['newname']) != $row['username']) {
+        } elseif (in_array(trim($_POST['regusername']), $names) AND trim($_POST['regusername']) != $row['username']) {
             $errors[] = "Dieser Username ist bereits vergeben.";
             $msg = $msg . " Dieser Username ist bereits vergeben. \n";
         }

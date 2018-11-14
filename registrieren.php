@@ -17,7 +17,7 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="index.php" class="logo">
                                                                     <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Registrieren</span>
 								</a>
 
@@ -30,7 +30,7 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-                                                    <h1>Geben sie Bitte ihre Daten ein.</h1>
+                                                    <h1>Geben Sie bitte ihre Daten ein.</h1>
                                                         
                                                     <div class=" regbox">
                                                         <form name="login" action="reg.php" method="post">
@@ -40,7 +40,7 @@
                                                         <br>
                                                         <input type="password" name="regpassword" id="regpassword" value="" placeholder="Passwort" tabindex="3" />
                                                         <br>
-                                                        <input type="password" name="regpasswordag" id="regpasswordag" value="" placeholder="Passwort" tabindex="4" />
+                                                        <input type="password" name="regpasswordag" id="regpasswordag" value="" placeholder="Passwort wiederholen" tabindex="4" />
                                                         <br>
                                                         <input type="text" name="regemail" id="regemail" value=""  placeholder="E-Mail" tabindex="1" maxlength="64" tabindex="5" />
                                                         <br>
