@@ -20,7 +20,10 @@ include_once 'db.php';
                 <div class="inner">
                     <!-- Logo -->
                     <a href="index.html" class="logo">
-                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+                        <span class="symbol">
+                            <img src="images/logo.svg" alt="" />
+                        </span>
+                        <span class="title">Phantom</span>
                     </a>
                     <!-- Nav -->
                     <nav>
@@ -47,7 +50,7 @@ include_once 'db.php';
             <div id="main">
 		<div class="inner">
 		<h1>Mieterspiegel</h1>
-			<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+			<span class="image main"><img src="" alt="Wohnblock" /></span>
                             <div>                            
                                 <?php
 
