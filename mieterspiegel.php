@@ -2,18 +2,18 @@
 
 <html>
     <head>
-	<title>Mieterspiegel</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <title>Mieterspiegel</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     </head>
-    
+
     <body class="is-preload">
-        
+
         <!-- Wrapper -->
-	<div id="wrapper">
-            
+        <div id="wrapper">
+
             <!-- Header -->
             <header id="header">
                 <div class="inner">
@@ -32,79 +32,98 @@
 
             <!-- Menu -->
             <nav id="menu">
-		<h2>Menu</h2>
-                    <ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="test.php">Ipsum veroeros</a></li>
-			<li><a href="test.php">Tempus etiam</a></li>
-			<li><a href="test.php">Consequat dolor</a></li>
-			<li><a href="elements.php">Elements</a></li>
-			</ul>
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="test.php">Ipsum veroeros</a></li>
+                    <li><a href="test.php">Tempus etiam</a></li>
+                    <li><a href="test.php">Consequat dolor</a></li>
+                    <li><a href="elements.php">Elements</a></li>
+                </ul>
             </nav>
 
             <!-- Main -->
             <div id="main">
-		<div class="inner">
+                <div class="inner">
+
                     <h1>Mieterspiegel</h1>
                     <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-                        <form name="Mieterspiegel anzeigen" action="db_abfrage_Mieterspiegel.php" method="POST">
-                            <input type="submit" value="Mieterspiegel anzeigen" name="anzeigen" />
-                        </form>
-                         <?php
-                                        
-                        ?>
-             
-		</div>
+                    <form name="Mieterspiegel anzeigen" action="mieterspiegel.php.php" method="POST">
+                        <input type="submit" value="Download Mieterspiegel" name="anzeigen" />
+
+                    </form>
+                    
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php include_once 'db_abfrage_Mieterspiegel.php'; ?>
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
             </div>
 
             <!-- Footer -->
             <footer id="footer">
-		<div class="inner">
+                <div class="inner">
                     <section>
-			<h2>Kontakt</h2>
-			<form method="post" action="#">
+                        <h2>Kontakt</h2>
+                        <form method="post" action="#">
                             <div class="fields">
-				<div class="field half">
-					<input type="text" name="name" id="name" placeholder="Name" />
+                                <div class="field half">
+                                    <input type="text" name="name" id="name" placeholder="Name" />
                                 </div>
-				<div class="field half">
-					<input type="email" name="email" id="email" placeholder="Email" />
-				</div>
-				<div class="field">
-					<textarea name="message" id="message" placeholder="Message"></textarea>
-				</div>
+                                <div class="field half">
+                                    <input type="email" name="email" id="email" placeholder="Email" />
+                                </div>
+                                <div class="field">
+                                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                                </div>
                             </div>
-				<ul class="actions">
-                                    <li><input type="submit" value="Send" class="primary" /></li>
-				</ul>
-			</form>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send" class="primary" /></li>
+                            </ul>
+                        </form>
                     </section>
                     <section>
-			<h2>Follow</h2>
-			<ul class="icons">
+                        <h2>Follow</h2>
+                        <ul class="icons">
                             <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
                             <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
                             <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
                             <li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
                             <li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
                             <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-			</ul>
-                    </section>
-			<ul class="copyright">
-                            <li>&copy; Untitled. All rights reserved</li><li>Design:Lars Lutz</li>
                         </ul>
-		</div>
+                    </section>
+                    <ul class="copyright">
+                        <li>&copy; Untitled. All rights reserved</li><li>Design:Lars Lutz</li>
+                    </ul>
+                </div>
             </footer>
 
-	</div>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
 
-	</body>
+    </body>
 </html>
 
+<?php
+include_once 'dbclose.php';
+?>
