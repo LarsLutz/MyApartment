@@ -18,8 +18,8 @@
             <header id="header">
                 <div class="inner">
                     <!-- Logo -->
-                    <a href="index.html" class="logo">
-                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+                    <a href="index.php" class="logo">
+                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartment</span>
                     </a>
                     <!-- Nav -->
                     <nav>
@@ -47,12 +47,7 @@
                 <div class="inner">
 
                     <h1>Mieterspiegel</h1>
-                    <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-                    <form name="Mieterspiegel anzeigen" action="mieterspiegel.php.php" method="POST">
-                        <input type="submit" value="Download Mieterspiegel" name="anzeigen" />
-
-                    </form>
-                    
+                    <span class="image main"><img src="images/pic13.jpg" alt="" /></span>                    
                     <div class="table-wrapper">
                         <table class="alt">
                             <!--<thead>-->
@@ -72,6 +67,11 @@
                             <!--<tfoot>-->
                             <!--</tfoot>-->
                         </table>
+                        
+                        <form name="Mieterspiegel dwonload" action="<?php download ?>" method="POST">
+                        <input type="submit" action="<?php download ?>" value="Download Mieterspiegel" name="anzeigen" />
+
+                    </form>
                     </div>
 
                 </div>
