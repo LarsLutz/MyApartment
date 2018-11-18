@@ -55,18 +55,22 @@
                     
                     <div class="table-wrapper">
                         <table class="alt">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php include_once 'db_abfrage_Mieterspiegel.php'; ?>
-                            </tbody>
-                            <tfoot>
-                            </tfoot>
+                            <!--<thead>-->
+                                <!--<tr>-->
+<!--                                    <th>Name</th>
+                                    <th>Vorname</th>
+                                    <th>Stockwerk</th>
+                                    <th>Grösse</th>
+                                    <th>Parkplätze</th>
+                                    <th>Platzhalter</th>
+                                    <th>Platzhalter</th>
+                                </tr>-->
+                            <!--</thead>-->
+                            <!--<tbody>-->
+                                <?php include_once 'TabelleDBtest.php'; ?>
+                            <!--</tbody>-->
+                            <!--<tfoot>-->
+                            <!--</tfoot>-->
                         </table>
                     </div>
 

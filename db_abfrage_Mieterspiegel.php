@@ -9,15 +9,19 @@ $sql = "SELECT name FROM Personen";
 $result = mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
 
 
+ $anzahl_spalten= mysqli_num_fields($result);
+ 
+
 while ($row = mysqli_fetch_assoc($result)) {
 
 
 
     echo " <tr>
                 <td>" . $zeile[] = $row['name'] . "</td>
-                <td>Ante turpis integer aliquet porttitor.</td>
+                <td>Ante turpis integer aliquet porttitor.</td>  
                 <td>29.99</td>
            </tr>";
+// 2 zeile td vorname aus DB auslesen
 }
 
 // Tabellenkopf darstellen
