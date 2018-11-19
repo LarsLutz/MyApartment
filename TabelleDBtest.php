@@ -4,7 +4,8 @@ include_once 'db.php';
 
 
 
-$abfrage = "SELECT `Name`, `Vorname`, `Email` FROM Personen";
+$abfrage = "SELECT `Personen`.`Name`, `Personen`.`Vorname`, `Personen`.`Email`, `Wohnungen`.`Miete`
+FROM `Personen`, `Wohnungen`";
 
 $ergebnis = mysqli_query($connid, $abfrage) or die(mysqli_error($connid));
 
