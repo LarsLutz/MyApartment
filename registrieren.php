@@ -1,5 +1,7 @@
 <!DOCTYPE HTML>
-
+<?php
+session_start();
+?>
 <html>
 	<head>
             <title>Registrieren</title>
@@ -51,6 +53,10 @@
                                                       </form>
                                                         <span class="loginlink"><a href="loginseite.php"><b>Zur&uumlck</b></a></span>
                                                     </div>
+                                                    <div class=" msgbox">
+                                                         <label><?php echo $_SESSION['ErrorMSG1']; ?></label>
+                                                          <label><?php echo $_SESSION['ErrorMSG2']; ?></label>
+                                                    </div>
 						</div>
 					</div>
 
@@ -95,4 +101,7 @@
 	</body>
 </html>
 
-
+<?php
+$_SESSION['ErrorMSG1']="";
+$_SESSION['ErrorMSG2']="";
+?>

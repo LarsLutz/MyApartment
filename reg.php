@@ -7,6 +7,8 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
     session_start();
     $msg = "";
     $errors = array();
+   
+        
 
     if (!isset($_POST['usernr']) AND ( $_POST['regusername']) AND ( $_POST['regpassword'])AND ( $_POST['regpasswordag'])AND ( $_POST['regemail'])) {
         $errors[] = "Bitte geben sie Ihre Daten ein.";
@@ -14,7 +16,7 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
     } else {
        $usrnmr= $_POST['usernr'];
 
-        $sql = "SELECT      id
+        $sql = "SELECT      idPersonen, Wohnungen_idGebaeude
                         FROM
                                personen
                         WHERE
@@ -22,13 +24,13 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
                 ";
         $result = mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
         $row = mysqli_fetch_assoc($result);
-
+        $wohnung = $row['Wohnungen_idGebaeude'];
 
 
         if (trim($_POST['usernr']) == '') {
             $errors[] = "Bitte geben Sie Ihre Usernummer ein.";
             $msg = $msg .= "Bitte geben Sie Ihre Usernummer ein.";
-        } elseif (trim($_POST['usernr']) != $row['idpersonen']) {
+        } elseif (trim($_POST['usernr']) != $row['idPersonen']) {
             $errors[] = "Diese UserID ist nicht vorhanden.";
             $msg = $msg .= "Diese UserID ist nicht vorhanden.";
         }
@@ -47,7 +49,6 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
     
     else {
         $errors = array();
-        // Pruefen, ob alle Formularfelder vorhanden sind
 
         $names = array();
         $sql = "SELECT  username
@@ -71,28 +72,75 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
             $errors[] = "Dieser Username ist bereits vergeben.";
             $msg = $msg . " Dieser Username ist bereits vergeben. \n";
         }
+        
+        if(trim($_POST['regpassword'])==""){
+                    $errors[]= "Bitte geben Sie Ihr Passwort ein.";
+                    $msg= $msg." Bitte geben Sie Ihr neues Passwort ein. <br>";
+                }
+                elseif(strlen(trim($_POST['regpassword'])) < 6){
+                    $errors[]= "Ihr Passwort muss mindestens 6 Zeichen lang sein.";
+                    $msg= $msg." Ihr Passwort muss mindestens 6 Zeichen lang sein. <br>";
+                }
+                if(trim($_POST['regpasswordag'])==""){
+                    $errors[]= "Bitte wiederholen Sie Ihr Passwort.";
+                    $msg= $msg." Bitte wiederholen Sie Ihr Passwort. <br>";
+                }
+                elseif(trim($_POST['regpassword']) != trim($_POST['regpasswordag'])){
+                    $errors[]= "Ihre Passwortwiederholung war nicht korrekt.";
+                    $msg= $msg." Ihre Passwortwiederholung war nicht korrekt. <br>";
+                }
+                
+                $emails = array();
+                $sql = "SELECT
+                               email
+                        FROM
+                               user
+                       ";
+                $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
+                while($row = mysqli_fetch_assoc($result))
+                    $emails[] = $row['email'];
+                
+                if(trim($_POST['regemail'])==''){
+                    $errors[]= "Bitte geben Sie Ihre Email-Adresse ein.";
+                    $msg= $msg." Bitte geben Sie Ihre Email-Adresse ein. \n";
+                }
+                elseif(!preg_match('?^[\w\.-]+@[\w\.-]+\.[\w]{2,4}$?', trim($_POST['regemail']))){
+                    $errors[]= "Die Syntax Ihrer E-Mail Adresse ist falsch.";
+                    $msg= $msg." Die Syntax Ihrer E-Mail Adresse ist falsch. \n";
+                }
+                elseif(in_array(trim($_POST['regemail']), $emails) AND trim($_POST['regemail'])!= $row['email']){
+                    $errors[]= "Diese Email-Adresse ist bereits vergeben.";
+                    $msg= $msg." Diese Email-Adresse ist bereits vergeben. \n";
+                    
+                }
+        
+        
     }
     if (count($errors)) {
 
         $msg = $msg . " Ihr Username konnte nicht gespeichert werden.";
-        $_SESSION['ErrorMSG3'] = $msg;
+        $_SESSION['ErrorMSG2'] = $msg;
 
         foreach ($errors as $error)
             echo $error . "faeheler";
 
-        header("location: userconf.php");
+        header("location: registrieren.php");
     } else {
-        $name = trim($_POST['newname']);
-        $sql = "UPDATE
-                                user
-                        SET
-                                username =  '" . mysqli_real_escape_string($connid, $name) . "'
-                              
-                        WHERE
-                                id = '" . mysqli_real_escape_string($connid, $_SESSION['UserID']) . "'
-                       ";
-        mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
-        header("location: userconf.php");
+        $name = trim($_POST['regusername']);
+        $regpw = md5(trim($_POST['regpassword']));
+        $regmail= trim($_POST['regemail']);
+           
+        
+         $sql = "INSERT INTO user (username,passwort,email,reg_datum,wohnung)
+		VALUES ('".mysqli_real_escape_string($connid, $name)."','".mysqli_real_escape_string($connid, $regpw)."','".mysqli_real_escape_string($connid, $regmail)."','".time()."','".mysqli_real_escape_string($connid, $wohnung)."'
+		)";
+          mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
+        
+        header("location: registrieren.php");
     }
+    
+    
 }
+
+include_once 'dbclose.php';
 ?>
