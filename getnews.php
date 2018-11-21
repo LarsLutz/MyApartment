@@ -20,8 +20,8 @@ if (mysqli_num_rows($result)) {
         $date = date('d.m.Y - H:i',($row->post));
          echo "<table class='alt'>\n";
         echo "<thead>\n";
-        echo "  <tr>\n";
-        echo "    <th>". $row->titel ."</th>\n";
+        echo "  <tr style= 'background-color: white;'>\n";
+        echo "    <th >". $row->titel ."</th>\n";
 //	echo "	  <th style='text-align:right'>".$row->autor."</th>\n";
         echo "    <th style='text-align:right'>". $row->autor.":&nbsp; &nbsp;   ".$date ."</th>\n";
         echo "  </tr>\n";

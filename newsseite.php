@@ -9,7 +9,7 @@ include_once 'deletenews.php';
 
 <html>
 	<head>
-		<title>Einstellungen</title>
+		<title>News</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,7 +25,7 @@ include_once 'deletenews.php';
 
 							<!-- Logo -->
 								<a href="index.php" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Profil Einstellungen</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">News</span>
 								</a>
 
 							<!-- Nav -->
@@ -54,17 +54,18 @@ include_once 'deletenews.php';
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Einstellungen</h1>
+							<h1>News</h1>
                                                         
                                                     <div class="newsbox">
                                                         <form name="pwchange" action="pwchange.php" method="post">
+                                                            <div class="newsfeed">
                                                             <div class="table-wrapper">
                                                                 <?php include_once 'getnews.php';?>
                                                             </div>
                                                       </form>
                                                         
                                                     </div>
-                                                        
+                                                    </div> 
                                                          
 						</div>
 					</div>
