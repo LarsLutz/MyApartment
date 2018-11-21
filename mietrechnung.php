@@ -2,7 +2,8 @@
 include "isuser.php";
 include 'db.php';
 include "autologout.php";
-include "mietrechnung_sql.php"
+include "mietrechnung_sql.php";
+include "mietrechnung_monat.php";
  ?>
 
 
@@ -57,6 +58,15 @@ include "mietrechnung_sql.php"
                     <h1>Mietrechnung</h1>
                     <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
                     <div class="table-wrapper">
+                        <?php 
+                        //var_dump($d1->diff($d2)->m + ($d1->diff($d2)->y*12));
+                        $einzugsdatum = date($monat[] = $reihe['Einzugsdatum']);
+                        $d1 = new DateTime ($einzugsdatum);
+                        $d2 = new Datetime (date("Y-m-d"));
+                        echo($d1 ->diff($d2)->m);                   
+                        echo($d1->diff($d2)->m + ($d1->diff($d2)->y*12));
+                        
+                        ?>
                         
                         <table>
                             <thead>
@@ -73,7 +83,7 @@ include "mietrechnung_sql.php"
                                     <td><?php echo $miete[] = $row['Miete']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Februar</td>
+                                    <td><?php echo $monat[] = $reihe['Einzugsdatum']; ?></td>
                                     <td>bezahlt</td>
                                     <td>19.99</td>
                                 </tr>

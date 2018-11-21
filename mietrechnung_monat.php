@@ -1,36 +1,28 @@
 <?php
 include_once 'db.php';
 
-                    $wohnung = array();
+                    $email = array();
                     
                         $sql = "SELECT
-                               wohnung
+                               email
                         FROM
                                user
                         WHERE
                                id = '".mysqli_real_escape_string($connid,$_SESSION['UserID'])."'
                        ";
                 $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
-                $row = mysqli_fetch_assoc($result);
+                $reihe = mysqli_fetch_assoc($result);
                
                 
-                $miete = array();
+                $monat = array();
                     $sql = "SELECT
-                                 Miete
+                                 Einzugsdatum
                         FROM
-                                 wohnungen
+                                 personen
                         WHERE
-                                 idGebaeude = '".$wohnung[] = $row['wohnung']."'
+                                 Email = '".$email[] = $reihe['email']."'
                        "; 
                 $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
-                $row = mysqli_fetch_assoc($result);
-               
-                
-                
-                
-                
-                
-                
+                $reihe = mysqli_fetch_assoc($result);
+
                         ?>
-
-
