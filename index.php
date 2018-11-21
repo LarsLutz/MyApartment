@@ -81,10 +81,10 @@ include "autologout.php";
 									<span class="image">
 										<img src="images/pic03.jpg" alt="" />
 									</span>
-									<a href="test.php">
-										<h2>Feugiat</h2>
+									<a href="newsseite.php">
+										<h2>News</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Schau dir die neusten Ereignisse der Wohngemeinschaft an.</p>
 										</div>
 									</a>
 								</article>
@@ -114,10 +114,10 @@ include "autologout.php";
 									<span class="image">
 										<img src="images/pic06.jpg" alt="" />
 									</span>
-									<a href="test.php">
-										<h2>Veroeros</h2>
+                                                                    <a href="userconf.php">
+										<h2>Einstellungen</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Passe deine Usernam, das Passwort oder deine Email an.</p>
 										</div>
 									</a>
 								</article>
