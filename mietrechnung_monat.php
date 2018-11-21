@@ -24,5 +24,13 @@ include_once 'db.php';
                        "; 
                 $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
                 $reihe = mysqli_fetch_assoc($result);
+                
+                        
+                        $einzugsdatum = date($monat[] = $reihe['Einzugsdatum']);
+                        $d1 = new DateTime ($einzugsdatum);
+                        $d2 = new Datetime (date("Y-m-d"));                  
+                        $monatsdauer = ($d1->diff($d2)->m + ($d1->diff($d2)->y*12));
+                        
+                      
 
                         ?>
