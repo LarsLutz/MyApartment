@@ -5,7 +5,7 @@ include_once 'db.php';
 $email = array();
                     
                         $sql = "SELECT
-                               email
+                               idPersonen
                         FROM
                                user
                         WHERE
@@ -21,7 +21,7 @@ $email = array();
                         FROM
                                  personen
                         WHERE
-                                 Email = '".$email[] = $reihe['email']."'
+                                 idPersonen = '".$email[] = $reihe['idPersonen']."'
                        "; 
                 $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
                 $reihe = mysqli_fetch_assoc($result);
