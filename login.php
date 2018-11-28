@@ -1,13 +1,6 @@
 <?php
    
- error_reporting(E_ALL);
-    $MYSQL_HOST = 'localhost';
-    $MYSQL_USER = 'root';
-    $MYSQL_PASS = '';
-    $MYSQL_DATA = 'myapartment_db';
-
-    $connid = mysqli_connect($MYSQL_HOST, $MYSQL_USER,$MYSQL_PASS,$MYSQL_DATA) OR die("Error: ". mysqli_error());
-    //mysqli_select_db($connid,$MYSQL_DATA) OR die("Error: ".mysqli_error($connid));
+ include 'db.php';
    
 
     // Session starten
@@ -15,7 +8,7 @@
    
 	function doLogin($ID, $Autologin)
     {
-            include_once 'db.php';
+            include 'db.php';
         // Die aktuelle SessionID wird in der DB gespeichert.
         $sql = "UPDATE
                         user
@@ -69,7 +62,7 @@
    
     if(isset($_POST['submit']) AND $_POST['submit']=='Login!'){
         // Falls der Nickname und das Passwort übereinstimmen..
-        echo 'SQL UN PW';
+        
         $sql = "SELECT
                         id
                 FROM
