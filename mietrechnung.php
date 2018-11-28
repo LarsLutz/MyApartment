@@ -2,8 +2,6 @@
 include "isuser.php";
 include 'db.php';
 include "autologout.php";
-include "mietrechnung_sql.php";
-include "mietrechnung_monat.php";
  ?>
 
 
@@ -26,8 +24,8 @@ include "mietrechnung_monat.php";
                 <div class="inner">
 
                     <!-- Logo -->
-                    <a href="index.html" class="logo">
-                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+                    <a href="index.php" class="logo">
+                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartement</span>
                     </a>
 
                     <!-- Nav -->
@@ -59,6 +57,7 @@ include "mietrechnung_monat.php";
                     <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
                     <div class="table-wrapper">
                         
+                      
                         
                         <table>
                             <thead>
@@ -69,24 +68,10 @@ include "mietrechnung_monat.php";
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Januar</td>
-                                    <td>offen</td>
-                                    <td><?php echo $miete[] = $row['Miete']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>bezahlt</td>
-                                    <td>19.99</td>
-                                </tr>
+                               <?php include_once 'mietrechnung_sql.php' ?>
 
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="2"></td>
-                                    <td>100.00</td>
-                                </tr>
-                            </tfoot>
+                            
                         </table>
                     </div>
                 </div>

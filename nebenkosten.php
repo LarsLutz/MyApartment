@@ -17,8 +17,8 @@
                 <div class="inner">
 
                     <!-- Logo -->
-                    <a href="index.html" class="logo">
-                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+                    <a href="index.php" class="logo">
+                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartement</span>
                     </a>
 
                     <!-- Nav -->
@@ -73,11 +73,35 @@
                     <div id="2018" >
                         <h1>2018</h1>
                         <p>Do chöme heizchöste und näbechöste inne</p>
+                        <svg id="statSvg" width="1500" height="400">
+                            <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040">200 </text>
+                            <rect x="50" y="50" width="200" height="50" rx="3" ry="3" fill="#2A7BB4" />
+                            
+                            <text x="0" y="180" font-size:0.8em font-family="Arial" fill="#404040">280 </text>
+                            <rect x="50" y="150" width="280" height="50" rx="3" ry="3" fill="#2A7BB4" />
+                            
+                            <text x="0" y="280" font-size:0.8em font-family="Arial" fill="#404040">90 </text>
+                            <rect x="50" y="250" width="90" height="50" rx="3" ry ="3" fill="#B4472A" />
+                            
+                            <line x1="51" y1="10" x2="51" y2="350" stroke-width="2" stroke="#808080" />
+                        </svg>
                     </div>
 
                     <div id="2017" style="display:none">
                         <h1>2017</h1>
                         <p>do chöme heizchöste und näbechöste dri</p> 
+                        <svg id="statSvg" width="1500" height="400">
+                            <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040">200 </text>
+                            <rect x="50" y="50" width="200" height="50" rx="3" ry="3" fill="#2A7BB4" />
+                            
+                            <text x="0" y="180" font-size:0.8em font-family="Arial" fill="#404040">280 </text>
+                            <rect x="50" y="150" width="280" height="50" rx="3" ry="3" fill="#2A7BB4" />
+                            
+                            <text x="0" y="280" font-size:0.8em font-family="Arial" fill="#404040">90 </text>
+                            <rect x="50" y="250" width="90" height="50" rx="3" ry ="3" fill="#B4472A" />
+                            
+                            <line x1="51" y1="10" x2="51" y2="350" stroke-width="2" stroke="#808080" />
+                        </svg>
                     </div>
 
 
