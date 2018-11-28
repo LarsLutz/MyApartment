@@ -54,7 +54,7 @@ include "autologout.php";
             <div id="main">
                 <div class="inner">
                     <h1>Mietrechnung</h1>
-                    <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+                    <span class="image main"><img alt="" /></span>
                     <div class="table-wrapper">
                         
                       
