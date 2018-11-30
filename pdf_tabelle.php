@@ -3,7 +3,7 @@ function fetch_data()
 {
     include_once 'db.php';
     $output = '';
-   // $connect = mysqli_connect("localhost", "root", "", "myapartment_db");
+    
     $query = "SELECT `personen`.`Name`, `personen`.`Vorname`, `personen`.`Email`, `wohnungen`.`Stockwerk`
     FROM `personen` JOIN `wohnungen` ON `personen`.`wohnungen_idGebaeude` = `wohnungen`.`idGebaeude` ";
     $result = mysqli_query($connid, $query);
@@ -42,6 +42,7 @@ if(isset($_POST["dwonload"]))
     $content = '';
     
     $content .= '
+          <h3 align = "center"> Mieterspiegel </h3>
           <table border="1" cellspacing="0" cellpadding="5">
           <tr>
             <th width= "15%"> Name</th>
@@ -64,7 +65,7 @@ if(isset($_POST["dwonload"]))
 
 ?>
 <!DOCTYPE html>
-<html>
+<!--<html>
     <head>
         <title>
             Hurensohn
@@ -73,15 +74,15 @@ if(isset($_POST["dwonload"]))
     <body>
         <table>
             <?php
-            echo fetch_data();
+           // echo fetch_data();
             ?>
             
         </table>
         <br />
-<!--        <form method="post">
+        <form method="post">
             <input type="submit" name="create_pdf" value="Create PDF" />   
-        </form>-->
+        </form>
         <br />
     </body>
-</html>
+</html>-->
 

@@ -62,7 +62,7 @@ include "autologout.php";
                                                                     <a href="mieterspiegel.php">
 										<h2>Mieterspiegel</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Hier sehen Sie den aktuellen Mieterspiegel.</p>
 										</div>
 									</a>
 								</article>
