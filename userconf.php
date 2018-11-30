@@ -14,6 +14,7 @@ include "autologout.php";
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+         
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -24,7 +25,7 @@ include "autologout.php";
 
 							<!-- Logo -->
 								<a href="index.php" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Profil Einstellungen</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartment</span>
 								</a>
 
 							<!-- Nav -->
@@ -60,6 +61,7 @@ include "autologout.php";
                                                           <h2>Passwort &auml;ndern</h2>
                                                           <label><?php echo $_SESSION['ErrorMSG1']; ?></label>
                                                           <input type="password" name="passwordold" id="passwordold" value="" placeholder="Altes Passwort" tabindex="1" />
+                                                         <label  id="msgpwold"></label>
                                                           <input type="password" name="passwordnew" id="passwordnew" value="" placeholder="Neues Passwort" tabindex="2" />
                                                           <input type="password" name="passwordnewag" id="passwordnewag" value="" placeholder="Neues Passwort wiederholen" tabindex="3" />
                                                           <br>
@@ -76,7 +78,9 @@ include "autologout.php";
                                                                 <h2>Email Adresse &auml;ndern</h2>
                                                                 <label><?php echo $_SESSION['ErrorMSG2']; ?></label>
                                                                 <input type="text" name="newemail" id="newemail" value="" placeholder="Neue Mail Adresse" tabindex="1" />
+                                                                <label  id="msgemail"></label>
                                                                 <br>
+                                                                
                                                                 <span class="loginbutton">
                                                                     <input type="submit" name="mailok" value="Ok" class="primary" tabindex="2"/>
                                                                     <input type="reset" value="Abbrechen" tabindex="3" />
@@ -147,8 +151,13 @@ include "autologout.php";
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+                        <script src="assets/js/formcheckconfig.js"></script>
+                        
+                        
+                        
 
 	</body>
+         
 </html>
 
 <?php

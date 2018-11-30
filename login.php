@@ -82,7 +82,7 @@
         else{ 
  
 header("location: loginfail.php");
-}
+} 
 }
 
 
