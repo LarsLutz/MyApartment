@@ -62,27 +62,4 @@ if(isset($_POST["dwonload"]))
  $obj_pdf->Output("sample.pdf", "I");
 }
 
-
 ?>
-<!DOCTYPE html>
-<!--<html>
-    <head>
-        <title>
-            Hurensohn
-        </title>
-    </head>
-    <body>
-        <table>
-            <?php
-           // echo fetch_data();
-            ?>
-            
-        </table>
-        <br />
-        <form method="post">
-            <input type="submit" name="create_pdf" value="Create PDF" />   
-        </form>
-        <br />
-    </body>
-</html>-->
-
