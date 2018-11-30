@@ -57,16 +57,18 @@ include "autologout.php";
 							<h1>Einstellungen</h1>
                                                         
                                                     <div class="confbox1">
-                                                        <form name="pwchange" action="pwchange.php" method="post">
+                                                        <form id = "pwchange" name="pwchange" action="pwchange.php" method="post">
                                                           <h2>Passwort &auml;ndern</h2>
                                                           <label><?php echo $_SESSION['ErrorMSG1']; ?></label>
                                                           <input type="password" name="passwordold" id="passwordold" value="" placeholder="Altes Passwort" tabindex="1" />
-                                                         <label  id="msgpwold"></label>
+                                                          <label  id="msgpwold"></label>
                                                           <input type="password" name="passwordnew" id="passwordnew" value="" placeholder="Neues Passwort" tabindex="2" />
+                                                          <label  id="msgpwnew"></label>
                                                           <input type="password" name="passwordnewag" id="passwordnewag" value="" placeholder="Neues Passwort wiederholen" tabindex="3" />
+                                                          <label  id="msgpwnewag"></label>
                                                           <br>
                                                           <span class="loginbutton">
-                                                              <input type="submit" name="pwok" value="Ok" class="primary" tabindex="4"/>
+                                                              <input type="submit" id="pwok" name="pwok" value="Ok" class="primary" tabindex="4"/>
                                                               <input type="reset" value="Abbrechen" tabindex="4" />
                                                           </span>
                                                       </form>
@@ -74,7 +76,7 @@ include "autologout.php";
                                                     </div>
                                                         
                                                          <div class="confbox2">
-                                                             <form name="mailchange" action="mailchange.php" method="post">
+                                                             <form id="mailchange" name="mailchange" action="mailchange.php" method="post">
                                                                 <h2>Email Adresse &auml;ndern</h2>
                                                                 <label><?php echo $_SESSION['ErrorMSG2']; ?></label>
                                                                 <input type="text" name="newemail" id="newemail" value="" placeholder="Neue Mail Adresse" tabindex="1" />
@@ -89,10 +91,11 @@ include "autologout.php";
                                                     </div>
                                                         
                                                          <div class="confbox3">
-                                                             <form name="login" action="namechange.php" method="post">
+                                                             <form id="namechange" name="namechange" action="namechange.php" method="post">
                                                           <h2>Username &auml;ndern</h2>
                                                                 <label><?php echo $_SESSION['ErrorMSG3']; ?></label>
                                                                 <input type="text" name="newname" id="newname" value="" placeholder="Neuer Username" tabindex="1" />
+                                                                 <label  id="msgusername"></label>
                                                                 <br>
                                                                 <span class="loginbutton">
                                                                     <input type="submit" name="nameok" value="Ok" class="primary" tabindex="2"/>
