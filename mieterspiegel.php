@@ -59,10 +59,9 @@ include "autologout.php";
                                 <?php include_once 'TabelleDBtest.php'; ?>
                         </table>
                         
-                        <form name="Mieterspiegel dwonload" action="<?php download ?>" method="POST">
-                        <input type="submit" action="<?php download ?>" value="Download Mieterspiegel" name="anzeigen" />
-
-                    </form>
+                        <form action ="pdf_tabelle.php"method="post">
+                        <input type="submit" name="dwonload" value="Download Mieterspiegel" />   
+                         </form>
                     </div>
 
                 </div>

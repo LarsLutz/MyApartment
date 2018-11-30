@@ -4,8 +4,8 @@ include_once 'db.php';
 
 
 
-$abfrage = "SELECT `Personen`.`Name`, `Personen`.`Vorname`, `Personen`.`Email`, `Wohnungen`.`Stockwerk`
-FROM `Personen` JOIN `Wohnungen` ON `Personen`.`Wohnungen_idGebaeude` = `Wohnungen`.`idGebaeude` ";
+$abfrage = "SELECT `personen`.`Name`, `personen`.`Vorname`, `personen`.`Email`, `wohnungen`.`Stockwerk`
+FROM `personen` JOIN `wohnungen` ON `personen`.`wohnungen_idGebaeude` = `wohnungen`.`idGebaeude` ";
 
 $ergebnis = mysqli_query($connid, $abfrage) or die(mysqli_error($connid));
 
@@ -28,5 +28,5 @@ while($zeile= mysqli_fetch_assoc($ergebnis))
     {
         echo"<td>".$wert."</td>";
     }
-echo"</tr>";
+   echo"</tr>";
 }
