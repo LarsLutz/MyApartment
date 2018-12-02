@@ -103,10 +103,10 @@ include "autologout.php";
 									<span class="image">
 										<img src="images/pic05.jpg" alt="" />
 									</span>
-									<a href="hausordnung.php">
+                                                                    <a target='_blank' href="Hausordnung.pdf" >
 										<h2>Hausordnung</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Hier sehen Sie die Hausordnung</p>
 										</div>
 									</a>
 								</article>
