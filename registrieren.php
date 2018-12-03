@@ -37,26 +37,34 @@ session_start();
                                                     <div class=" regbox">
                                                         <form name="login" action="reg.php" method="post">
                                                           <input type="text" name="usernr" id="usernr" value=""  placeholder="Anmelde Nummer" tabindex="1" maxlength="8" />
+                                                          <label  id="msgid"></label>
                                                         <br>
                                                         <input type="text" name="regusername" id="regusername" value=""  placeholder="Username" tabindex="2" maxlength="32" />
+                                                         <label  id="msgreuser"></label>
                                                         <br>
                                                         <input type="password" name="regpassword" id="regpassword" value="" placeholder="Passwort" tabindex="3" />
+                                                        <label  id="msgregpw"></label>
                                                         <br>
                                                         <input type="password" name="regpasswordag" id="regpasswordag" value="" placeholder="Passwort wiederholen" tabindex="4" />
+                                                        <label  id="msgregpwag"></label>
                                                         <br>
                                                         <input type="text" name="regemail" id="regemail" value=""  placeholder="E-Mail" tabindex="1" maxlength="64" tabindex="5" />
+                                                        <label  id="msgemail"></label>
                                                         <br>
                                                         <span class="loginbutton">
-                                                            <input type="submit" name="regok" value="Registrieren" class="primary" tabindex="5"/>
+                                                            <input id="regok" type="submit" name="regok" value="Registrieren" class="primary" tabindex="5"/>
                                                             <input type="reset" value="Reset" tabindex="6" />
                                                         </span>
                                                       </form>
                                                         <span class="loginlink"><a href="loginseite.php"><b>Zur&uumlck</b></a></span>
                                                     </div>
-                                                    <div class=" msgbox">
-                                                         <label><?php echo $_SESSION['ErrorMSG1']; ?></label>
-                                                          <label><?php echo $_SESSION['ErrorMSG2']; ?></label>
-                                                    </div>
+                                                    <?php if ($_SESSION["ErrorMSG1"]!="" or $_SESSION['ErrorMSG2']!="" ){
+                                                            echo '<div class= "msgbox">';
+                                                            echo $_SESSION['ErrorMSG1'];
+                                                            echo $_SESSION['ErrorMSG2'];
+                                                            echo '</div>'; 
+                                                    }?>
+                                                         
 						</div>
 					</div>
 
@@ -97,6 +105,7 @@ session_start();
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+                        <script src="assets/js/formreg.js"></script>
 
 	</body>
 </html>

@@ -38,7 +38,7 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
     if (count($errors)) {
         $msg = $msg .= "Ihr Konto konnte nicht erstellt werden.<br>\n";
 
-        $_SESSION['ErrorMSG1'] = $msg;
+        $_SESSION['ErrorMSG1'] = "<label>".$msg."</label>";
 
         foreach ($errors as $error)
             echo $error . "faeheler";
@@ -119,7 +119,7 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
     if (count($errors)) {
 
         $msg = $msg . " Ihr Username konnte nicht gespeichert werden.";
-        $_SESSION['ErrorMSG2'] = $msg;
+        $_SESSION['ErrorMSG2'] = "<label>".$msg."</label>";
 
         foreach ($errors as $error)
             echo $error . "faeheler";

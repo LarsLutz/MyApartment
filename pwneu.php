@@ -20,7 +20,7 @@ include_once 'autopw.php';
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="index.php" class="logo">
                                                                     <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Neues Passwort anfordern</span>
 								</a>
 						</div>
