@@ -35,7 +35,7 @@ if(isset($_POST["dwonload"]))
     $obj_pdf->setFooterMargin(PDF_MARGIN_FOOTER);
     $obj_pdf->SetMargins(PDF_MARGIN_LEFT, '5', PDF_MARGIN_RIGHT);
     $obj_pdf->setPrintHeader(false);
-    $obj_pdf->setPrintFooter(false); // or true
+    $obj_pdf->setPrintFooter(TRUE); // or true
     $obj_pdf->SetAutoPageBreak(TRUE, 10);
     $obj_pdf->SetFont('helvetica','', 12);
     
@@ -44,7 +44,7 @@ if(isset($_POST["dwonload"]))
     $content .= '
           <h3 align = "center"> Mieterspiegel </h3>
           <table border="1" cellspacing="0" cellpadding="5">
-          <tr style = "font-weight: bold; background-color: #A0A0A0;">
+          <tr style = "font-weight: bold; background-color: #A0A0A0; ">
             <th  width= "15%"> Name</th>
             <th width= "15%"> Vorname</th>
             <th width = "50%"> Email</th>
