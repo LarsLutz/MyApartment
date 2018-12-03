@@ -1,8 +1,8 @@
 <?php
 include_once 'db.php';
 
+//heizchöste 2018
 $wohnung = array();
-
 $sql = "SELECT
                                wohnung
                         FROM
@@ -14,15 +14,16 @@ $result = mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mys
 $row = mysqli_fetch_assoc($result);
 
 
-$miete = array();
+$heizkosten2018 = array();
 $sql = "SELECT
-                                 Miete
+                                 betrag
                         FROM
-                                 wohnungen
+                                 heizkosten
                         WHERE
-                                 idGebaeude = '" . $wohnung[] = $row['wohnung'] . "'
-                       ";
+                                 Wohnungen_idGebaeude = '" . $wohnung[] = $row['wohnung'] . "' AND jahr = '2018' " ;
+                                     
 $result = mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
 $row = mysqli_fetch_assoc($result);
 
+ //$heizkosten2018[] = $row['betrag'];
 ?>
