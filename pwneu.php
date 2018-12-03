@@ -34,10 +34,11 @@ include_once 'autopw.php';
                                                         
                                                     <div class=" pwneubox">
                                                       <form name="pwneu" action="autopw.php" method="post">
-                                                          <input type="text" name="pwemail" id="pwemail" value=""  placeholder="Ihre E-Mail Adresse" tabindex="1" maxlength="64" />
+                                                          <input  type="text" name="pwemail" id="pwemail" value=""  placeholder="Ihre E-Mail Adresse" tabindex="1" maxlength="64" />
+                                                          <label  id="msgemail"></label>
                                                           <br>
                                                         <span class="loginbutton">
-                                                            <input type="submit" name="submit" value="Senden" class="primary" tabindex="3"/>
+                                                            <input id="submit "type="submit" name="submit" value="Senden" class="primary" tabindex="3"/>
                                                             <input type="reset" value="Reset" tabindex="4" />
                                                         </span>
                                                       </form>
@@ -83,6 +84,7 @@ include_once 'autopw.php';
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+                        <script src="assets/js/formpwverg.js"></script>
 
 	</body>
 </html>
