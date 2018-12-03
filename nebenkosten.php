@@ -24,7 +24,7 @@ include "nebenkosten_sql.php";
 
                     <!-- Logo -->
                     <a href="index.php" class="logo">
-                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartement</span>
+                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartment</span>
                     </a>
 
                     <!-- Nav -->
@@ -77,7 +77,6 @@ include "nebenkosten_sql.php";
                   
                   
                     <div id="2018" >
-                        <h1>2018</h1>
                         <svg id="statSvg" width="1500" height="500">
                             <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $heizkosten2018[] = $row['betrag']; ?> </text>
                             <rect x="50" y="50" width="200" height="50" rx="3" ry="3" fill="#efeb09" />
@@ -95,9 +94,7 @@ include "nebenkosten_sql.php";
                         </svg>
                     </div>
 
-                    <div id="2017" style="display:none">
-                        <h1>2017</h1>
-                        <p>do chöme heizchöste und näbechöste dri</p> 
+                    <div id="2017" style="display:none"> 
                         <svg id="statSvg" width="1500" height="400">
                             <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040">200 </text>
                             <rect x="50" y="50" width="200" height="50" rx="3" ry="3" fill="#2A7BB4" />

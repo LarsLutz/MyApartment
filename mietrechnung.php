@@ -25,7 +25,7 @@ include "autologout.php";
 
                     <!-- Logo -->
                     <a href="index.php" class="logo">
-                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartement</span>
+                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartment</span>
                     </a>
 
                     <!-- Nav -->
