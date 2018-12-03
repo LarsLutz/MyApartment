@@ -44,12 +44,13 @@ if(isset($_POST["dwonload"]))
     $content .= '
           <h3 align = "center"> Mieterspiegel </h3>
           <table border="1" cellspacing="0" cellpadding="5">
-          <tr>
-            <th width= "15%"> Name</th>
+          <tr style = "font-weight: bold; background-color: #A0A0A0;">
+            <th  width= "15%"> Name</th>
             <th width= "15%"> Vorname</th>
             <th width = "50%"> Email</th>
             <th > Stockwerk</th>
           </tr>
+          
 ';
     
  $content .= fetch_data();
