@@ -75,39 +75,68 @@ include "nebenkosten_sql.php";
                         }
                     </script>
                   
-                  
+                  <div class="tabbox">
                     <div id="2018" >
-                        <svg id="statSvg" width="1500" height="500">
+                        <svg id="statSvg" width="1500" height="650">
                             <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $heizkosten2018[] = $row['betrag']; ?> </text>
-                            <rect x="50" y="50" width="200" height="50" rx="3" ry="3" fill="#efeb09" />
+                            <rect x="50" y="50" width="<?php echo $heizkosten2018[] = $row['betrag']; ?>" height="50" rx="3" ry="3" fill="#efeb09" />
                             
-                            <text x="0" y="180" font-size:0.8em font-family="Arial" fill="#404040">280 </text>
-                            <rect x="50" y="150" width="280" height="50" rx="3" ry="3" fill="#2A7BB4" />
+                            <text x="0" y="180" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $nebenkosten2018[] = $row2['betrag']; ?> </text>
+                            <rect x="50" y="150" width="<?php echo $nebenkosten2018[] = $row2['betrag']; ?>" height="50" rx="3" ry="3" fill="#2A7BB4" />
                             
-                            <text x="0" y="280" font-size:0.8em font-family="Arial" fill="#404040">90 </text>
-                            <rect x="50" y="250" width="90" height="50" rx="3" ry ="3" fill="#f91800" />
+                            <text x="0" y="280" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $parkplatz2018[] = $row4['betrag'];?> </text>
+                            <rect x="50" y="250" width="<?php echo $parkplatz2018[] = $row4['betrag'];?>" height="50" rx="3" ry ="3" fill="#f91800" />
                             
-                            <text x="0" y="380" font-size:0.8em font-family="Arial" fill="#404040">90 </text>
-                            <rect x="50" y="350" width="90" height="50" rx="3" ry ="3" fill="#4be530" />
+                            <text x="0" y="380" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $wasserverbrauch2018[] = $row6['betrag'];?> </text>
+                            <rect x="50" y="350" width="<?php echo $wasserverbrauch2018[] = $row6['betrag'];?>" height="50" rx="3" ry ="3" fill="#4be530" />
+                            
+                            <rect x="22" y="470" width="25" height="25" rx="3" ry="3" fill="#efeb09" />
+                            <text x="70" y="490" font-size:0.6em font-family="Arial" fill="#404040">Heizkosten </text>
+                            
+                            <rect x="22" y="510" width="25" height="25" rx="3" ry="3" fill="#2A7BB4" />
+                            <text x="70" y="530" font-size:0.6em font-family="Arial" fill="#404040">Nebenkosten </text>
+                            
+                            <rect x="22" y="550" width="25" height="25" rx="3" ry="3" fill="#f91800" />
+                            <text x="70" y="570" font-size:0.6em font-family="Arial" fill="#404040">Parkplatz </text>
+                            
+                            <rect x="22" y="590" width="25" height="25" rx="3" ry="3" fill="#4be530" />
+                            <text x="70" y="610" font-size:0.6em font-family="Arial" fill="#404040">Wasserkosten </text>
                             
                             <line x1="51" y1="10" x2="51" y2="450" stroke-width="2" stroke="#808080" />
                         </svg>
                     </div>
-
+                  </div>
+                    <div class="tabbox">
                     <div id="2017" style="display:none"> 
-                        <svg id="statSvg" width="1500" height="400">
-                            <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040">200 </text>
-                            <rect x="50" y="50" width="200" height="50" rx="3" ry="3" fill="#2A7BB4" />
+                        <svg id="statSvg" width="1500" height="650">
+                            <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $heizkosten2017[] = $row8['betrag']; ?> </text>
+                            <rect x="50" y="50" width="<?php echo $heizkosten2017[] = $row8['betrag']; ?>" height="50" rx="3" ry="3" fill="#efeb09" />
                             
-                            <text x="0" y="180" font-size:0.8em font-family="Arial" fill="#404040">280 </text>
-                            <rect x="50" y="150" width="280" height="50" rx="3" ry="3" fill="#2A7BB4" />
+                            <text x="0" y="180" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $nebenkosten2017[] = $row10['betrag']; ?> </text>
+                            <rect x="50" y="150" width="<?php echo $nebenkosten2017[] = $row10['betrag']; ?>" height="50" rx="3" ry="3" fill="#2A7BB4" />
                             
-                            <text x="0" y="280" font-size:0.8em font-family="Arial" fill="#404040">90 </text>
-                            <rect x="50" y="250" width="90" height="50" rx="3" ry ="3" fill="#B4472A" />
+                            <text x="0" y="280" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $parkplatz2017[] = $row12['betrag'];?> </text>
+                            <rect x="50" y="250" width="<?php echo $parkplatz2017[] = $row12['betrag'];?>" height="50" rx="3" ry ="3" fill="#f91800" />
                             
-                            <line x1="51" y1="10" x2="51" y2="350" stroke-width="2" stroke="#808080" />
+                            <text x="0" y="380" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $wasserverbrauch2017[] = $row14['betrag'];?> </text>
+                            <rect x="50" y="350" width="<?php echo $wasserverbrauch2017[] = $row14['betrag'];?>" height="50" rx="3" ry ="3" fill="#4be530" />
+                            
+                            <rect x="22" y="470" width="25" height="25" rx="3" ry="3" fill="#efeb09" />
+                            <text x="70" y="490" font-size:0.6em font-family="Arial" fill="#404040">Heizkosten </text>
+                            
+                            <rect x="22" y="510" width="25" height="25" rx="3" ry="3" fill="#2A7BB4" />
+                            <text x="70" y="530" font-size:0.6em font-family="Arial" fill="#404040">Nebenkosten </text>
+                            
+                            <rect x="22" y="550" width="25" height="25" rx="3" ry="3" fill="#f91800" />
+                            <text x="70" y="570" font-size:0.6em font-family="Arial" fill="#404040">Parkplatz </text>
+                            
+                            <rect x="22" y="590" width="25" height="25" rx="3" ry="3" fill="#4be530" />
+                            <text x="70" y="610" font-size:0.6em font-family="Arial" fill="#404040">Wasserkosten </text>
+                            
+                            <line x1="51" y1="10" x2="51" y2="450" stroke-width="2" stroke="#808080" />
                         </svg>
                     </div>
+                        </div>
 
 
                 </div>

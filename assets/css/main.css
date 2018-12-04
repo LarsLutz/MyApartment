@@ -3435,6 +3435,17 @@ input, select, textarea {
              
         }
         
+        .tabbox {
+                margin: 2em auto;
+		padding: 2em;
+                max-width: 50em;
+                width: 100%;
+                max-height: 50;
+                height: 100%;
+              
+             
+        }
+        
    .regbox {
                 margin: 2em auto;
 		padding: 2em;
@@ -3489,6 +3500,7 @@ input, select, textarea {
                
         
         }
+       
         .newsfeed{
             max-width: 45em;
             width: 100%;
