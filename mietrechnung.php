@@ -40,15 +40,18 @@ include "autologout.php";
 
             <!-- Menu -->
             <nav id="menu">
-                <h2>Menu</h2>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="test.php">Ipsum veroeros</a></li>
-                    <li><a href="test.php">Tempus etiam</a></li>
-                    <li><a href="test.php">Consequat dolor</a></li>
-                    <li><a href="elements.php">Elements</a></li>
-                </ul>
-            </nav>
+						<h2>Menu</h2>
+						<ul>
+                                                    <li><a href="index.php">Home</a></li>
+							<li><a href="mieterspiegel.php">Mieterspiegel</a></li>
+                                                        <li><a href="nebenkosten.php">Nebenkosten</a></li>
+							<li><a href="newsseite.php">News</a></li>
+                                                        <li><a href="mietrechnung.php">Mietrechnung</a></li>
+                                                        <li><a href="hausordnung.pdf">Hausordnung</a></li>
+                                                        <li><a href="userconf.php">Einstellungen</a></li>
+                                                        <li><a href="logout.php"><b>Logout</b></a></li>
+						</ul>
+					</nav>
 
             <!-- Main -->
             <div id="main">
@@ -110,8 +113,15 @@ include "autologout.php";
                             <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
                         </ul>
                     </section>
+                     <section>
+
+                        <ul class="icons">
+                            <li><a href="tel:+41627728069" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+                            <li><a href="mailto:admin.bclaufen.ch" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+                        </ul>
+                    </section>
                     <ul class="copyright">
-                        <li>&copy; Untitled. All rights reserved</li><li>Design:Lars Lutz</li>
+                        <li>&copy; FHNW 2018. All rights reserved</li><li>Design:Eduart Bunjaku, Robin Widmer, Lars Lutz</li>
                     </ul>
                 </div>
             </footer>
