@@ -57,7 +57,7 @@ include "autologout.php";
                     <h1>Mieterspiegel</h1>                  
                     <div class="table-wrapper">
                         <table class="alt">
-                            <?php include_once 'TabelleDBtest.php'; ?>
+                            <?php include_once 'tabelledbabfrage.php'; ?>
                         </table>
 
                         <form action ="pdf_tabelle.php"method="post">
