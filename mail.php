@@ -1,10 +1,11 @@
 <?php
-
+if(isset($_POST['mailsend']) AND $_POST['mailsend'] == 'Senden') {
 $empfaenger = "admin.bclaufen.ch";
-$betreff = "Ihr neues Paswort";
+$betreff = "Anfrage von ".$_POST["email"];
 $from = "From: ".$_POST["name"]. "<admin.bclaufen.ch>";
-$text = "Hier ist ihr neues PW '.$randpw.'";
+$text = $_POST["message"];
  
 mail($empfaenger, $betreff, $text, $from);
+}
 ?>
 
