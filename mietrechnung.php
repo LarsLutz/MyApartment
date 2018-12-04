@@ -2,7 +2,7 @@
 include "isuser.php";
 include 'db.php';
 include "autologout.php";
- ?>
+?>
 
 
 <!DOCTYPE HTML>
@@ -40,18 +40,18 @@ include "autologout.php";
 
             <!-- Menu -->
             <nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-                                                    <li><a href="index.php">Home</a></li>
-							<li><a href="mieterspiegel.php">Mieterspiegel</a></li>
-                                                        <li><a href="nebenkosten.php">Nebenkosten</a></li>
-							<li><a href="newsseite.php">News</a></li>
-                                                        <li><a href="mietrechnung.php">Mietrechnung</a></li>
-                                                        <li><a href="hausordnung.pdf">Hausordnung</a></li>
-                                                        <li><a href="userconf.php">Einstellungen</a></li>
-                                                        <li><a href="logout.php"><b>Logout</b></a></li>
-						</ul>
-					</nav>
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="mieterspiegel.php">Mieterspiegel</a></li>
+                    <li><a href="nebenkosten.php">Nebenkosten</a></li>
+                    <li><a href="newsseite.php">News</a></li>
+                    <li><a href="mietrechnung.php">Mietrechnung</a></li>
+                    <li><a href="hausordnung.pdf">Hausordnung</a></li>
+                    <li><a href="userconf.php">Einstellungen</a></li>
+                    <li><a href="logout.php"><b>Logout</b></a></li>
+                </ul>
+            </nav>
 
             <!-- Main -->
             <div id="main">
@@ -59,9 +59,9 @@ include "autologout.php";
                     <h1>Mietrechnung</h1>
                     <span class="image main"><img alt="" /></span>
                     <div class="table-wrapper">
-                        
-                      
-                        
+
+
+
                         <table>
                             <thead>
                                 <tr>
@@ -71,10 +71,10 @@ include "autologout.php";
                                 </tr>
                             </thead>
                             <tbody>
-                               <?php include_once 'mietrechnung_sql.php' ?>
+                                <?php include_once 'mietrechnung_sql.php' ?>
 
                             </tbody>
-                            
+
                         </table>
                     </div>
                 </div>
@@ -113,7 +113,7 @@ include "autologout.php";
                             <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
                         </ul>
                     </section>
-                     <section>
+                    <section>
 
                         <ul class="icons">
                             <li><a href="tel:+41627728069" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
@@ -140,7 +140,7 @@ include "autologout.php";
 
 <?php
 include_once 'dbclose.php';
-$_SESSION['ErrorMSG1']="";
-$_SESSION['ErrorMSG2']="";
-$_SESSION['ErrorMSG3']="";
+$_SESSION['ErrorMSG1'] = "";
+$_SESSION['ErrorMSG2'] = "";
+$_SESSION['ErrorMSG3'] = "";
 ?>
