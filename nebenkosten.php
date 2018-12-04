@@ -194,3 +194,10 @@ include "nebenkosten_sql.php";
 
     </body>
 </html>
+
+<?php
+include_once 'dbclose.php';
+$_SESSION['ErrorMSG1'] = "";
+$_SESSION['ErrorMSG2'] = "";
+$_SESSION['ErrorMSG3'] = "";
+?>
