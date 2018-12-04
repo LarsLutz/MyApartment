@@ -22,7 +22,6 @@ if (mysqli_num_rows($result)) {
         echo "<thead>\n";
         echo "  <tr>\n";
         echo "    <th >". $row->titel ."</th>\n";
-//	echo "	  <th style='text-align:right'>".$row->autor."</th>\n";
         echo "    <th style='text-align:right'>". $row->autor.":&nbsp; &nbsp;   ".$date ."</th>\n";
         echo "  </tr>\n";
         echo "</thead>";
@@ -41,47 +40,4 @@ if (mysqli_num_rows($result)) {
 }
 ?>
 
-<!--<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-		</div>-->
+

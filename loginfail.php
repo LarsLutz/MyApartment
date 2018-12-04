@@ -34,7 +34,7 @@
                                                         
                                                     <div class="loginboxfail">
                                                       <form name="login" action="login.php" method="post">
-                                                        <label for="autologin" font-color="red"><b>Username oder Passwort sind falsch!</b></label>
+                                                        <label for="autologin" color="red"><b>Username oder Passwort sind falsch!</b></label>
                                                         <input type="text" name="username" id="loginname" value=""  placeholder="Loginname" tabindex="1" maxlength="32" />
                                                         <br>
                                                         <input type="password" name="password" id="passwordname" value="" placeholder="Passwort" tabindex="2" />
@@ -78,7 +78,7 @@
 							</section>
 							
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design:Lars Lutz</li>
+								<li>&copy; FHNW 2018. All rights reserved</li><li>Design:Eduart Bunjaku, Robin Widmer, Lars Lutz</li>
 							</ul>
 						</div>
 					</footer>

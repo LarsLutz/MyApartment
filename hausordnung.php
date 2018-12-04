@@ -18,7 +18,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartment</span>
 								</a>
 
 							<!-- Nav -->
@@ -35,11 +35,14 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.php">Home</a></li>
-							<li><a href="test.php">Ipsum veroeros</a></li>
-							<li><a href="test.php">Tempus etiam</a></li>
-							<li><a href="test.php">Consequat dolor</a></li>
-							<li><a href="elements.php">Elements</a></li>
+                                                    <li><a href="index.php">Home</a></li>
+							<li><a href="mieterspiegel.php">Mieterspiegel</a></li>
+                                                        <li><a href="nebenkosten.php">Nebenkosten</a></li>
+							<li><a href="newsseite.php">News</a></li>
+                                                        <li><a href="mietrechnung.php">Mietrechnung</a></li>
+                                                        <li><a href="hausordnung.pdf">Hausordnung</a></li>
+                                                        <li><a href="userconf.php">Einstellungen</a></li>
+                                                        <li><a href="logout.php"><b>Logout</b></a></li>
 						</ul>
 					</nav>
 

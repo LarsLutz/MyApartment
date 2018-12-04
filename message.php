@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-            <title>Login felgeschlagen</title>
+            <title>Password versendet</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,7 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="index.php" class="logo">
                                                                     <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Meldungen MyApartment</span>
 								</a>
 
@@ -50,7 +50,7 @@
 							</section>
 							
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design:Lars Lutz</li>
+								<li>&copy; FHNW 2018. All rights reserved</li><li>Design:Eduart Bunjaku, Robin Widmer, Lars Lutz</li>
 							</ul>
 						</div>
 					</footer>

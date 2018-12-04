@@ -3,7 +3,7 @@
 include "isuser.php";
 include 'db.php';
 include "autologout.php";
- ?>
+?>
 
 <html>
     <head>
@@ -40,9 +40,11 @@ include "autologout.php";
                 <h2>Menu</h2>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="test.php">Edu</a></li>
-                    <li><a href="test.php">Skippy</a></li>
-                    <li><a href="elements.php">Elements</a></li>
+                    <li><a href="mieterspiegel.php">Mieterspiegel</a></li>
+                    <li><a href="nebenkosten.php">Nebenkosten</a></li>
+                    <li><a href="newsseite.php">News</a></li>
+                    <li><a href="mietrechnung.php">Mietrechnung</a></li>
+                    <li><a href="hausordnung.pdf">Hausordnung</a></li>
                     <li><a href="userconf.php">Einstellungen</a></li>
                     <li><a href="logout.php"><b>Logout</b></a></li>
                 </ul>
@@ -56,12 +58,12 @@ include "autologout.php";
                     <span class="image main"><img src="images/pic13.jpg" alt="" /></span>                    
                     <div class="table-wrapper">
                         <table class="alt">
-                                <?php include_once 'TabelleDBtest.php'; ?>
+                            <?php include_once 'TabelleDBtest.php'; ?>
                         </table>
-                        
+
                         <form action ="pdf_tabelle.php"method="post">
-                        <input type="submit" name="dwonload" value="Download Mieterspiegel" />   
-                         </form>
+                            <input type="submit" name="dwonload" value="Download Mieterspiegel" />   
+                        </form>
                     </div>
 
                 </div>
@@ -89,8 +91,15 @@ include "autologout.php";
                             </ul>
                         </form>
                     </section>
+                    <section>
+
+                        <ul class="icons">
+                            <li><a href="tel:+41627728069" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+                            <li><a href="mailto:admin.bclaufen.ch" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+                        </ul>
+                    </section>
                     <ul class="copyright">
-                        <li>&copy; Untitled. All rights reserved</li><li>Design:Lars Lutz</li>
+                        <li>&copy; FHNW 2018. All rights reserved</li><li>Design:Eduart Bunjaku, Robin Widmer, Lars Lutz</li>
                     </ul>
                 </div>
             </footer>

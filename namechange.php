@@ -11,8 +11,8 @@ include_once 'db.php';
             // Pruefen, ob alle Formularfelder vorhanden sind
             if(!isset($_POST['newname'])){
                 
-                $errors = "Bitte fuellen sie alle Formularfelder aus.";
-                $msg= $msg." Bitte fuellen sie alle Formularfelder aus. \n";
+                $errors = "Bitte f&uuml;llen sie alle Formularfelder aus.";
+                $msg= $msg." Bitte f&uuml;llen sie alle Formularfelder aus. \n";
             }
             else{
                 $names = array();
@@ -39,7 +39,7 @@ include_once 'db.php';
                     $errors[]= "Bitte geben Sie Ihre Email-Adresse ein.";
                     $msg= $msg." Bitte geben Sie Ihren neuen Usernamen ein. \n";
                 }
-                elseif(!preg_match('/^[a-zA-ZäöüÄÖÜ]+$/', trim($_POST['newname']))){
+                elseif(!preg_match('/^[0-9a-zA-ZäöüÄÖÜ]+$/', trim($_POST['newname']))){
                     $errors[]= "Sie verwenden ungültige Sonderzeichen.";
                     $msg= $msg." Sie verwenden ungültige Sonderzeichen. \n";
                 }

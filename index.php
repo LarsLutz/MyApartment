@@ -22,7 +22,7 @@ include "autologout.php";
 
 							<!-- Logo -->
 								<a href="index.php" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartement</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">MyApartment</span>
 								</a>
 
 							<!-- Nav -->
@@ -40,9 +40,11 @@ include "autologout.php";
 						<h2>Menu</h2>
 						<ul>
                                                     <li><a href="index.php">Home</a></li>
-							<li><a href="test.php">Edu</a></li>
-                                                        <li><a href="test.php">Skippy</a></li>
-							<li><a href="elements.php">Elements</a></li>
+							<li><a href="mieterspiegel.php">Mieterspiegel</a></li>
+                                                        <li><a href="nebenkosten.php">Nebenkosten</a></li>
+							<li><a href="newsseite.php">News</a></li>
+                                                        <li><a href="mietrechnung.php">Mietrechnung</a></li>
+                                                        <li><a href="hausordnung.pdf">Hausordnung</a></li>
                                                         <li><a href="userconf.php">Einstellungen</a></li>
                                                         <li><a href="logout.php"><b>Logout</b></a></li>
 						</ul>
@@ -103,7 +105,7 @@ include "autologout.php";
 									<span class="image">
 										<img src="images/pic05.jpg" alt="" />
 									</span>
-                                                                    <a target='_blank' href="Hausordnung.pdf" >
+                                                                    <a target='_blank' href="hausordnung.pdf" >
 										<h2>Hausordnung</h2>
 										<div class="content">
 											<p>Hier sehen Sie die Hausordnung</p>
@@ -150,7 +152,7 @@ include "autologout.php";
 							</section>
 							
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design:Lars Lutz</li>
+								<li>&copy; FHNW 2018. All rights reserved</li><li>Design:Eduart Bunjaku, Robin Widmer, Lars Lutz</li>
 							</ul>
 						</div>
 					</footer>

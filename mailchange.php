@@ -10,8 +10,8 @@ include_once 'db.php';
             // Pruefen, ob alle Formularfelder vorhanden sind
             if(!isset($_POST['newemail'])){
                 
-                $errors = "Bitte fuellen sie alle Formularfelder aus.";
-                $msg= $msg." Bitte fuellen sie alle Formularfelder aus. \n";
+                $errors = "Bitte f&uuml;llen sie alle Formularfelder aus.";
+                $msg= $msg." Bitte f&uumlllen sie alle Formularfelder aus. \n";
             }
             else{
                 $emails = array();
@@ -51,7 +51,7 @@ include_once 'db.php';
                 if(count($errors)){
                     
                   echo "Ihre E-Mail konnte nicht gespeichert werden. \n";
-                $msg= $msg." Ihre E-Mail konnte nicht gespeichert werden..";
+                $msg= $msg." Ihre E-Mail konnte nicht gespeichert werden.";
                 $_SESSION['ErrorMSG2']=$msg;
                 
                  foreach($errors as $error)
