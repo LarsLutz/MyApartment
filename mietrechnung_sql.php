@@ -60,14 +60,29 @@ $row = mysqli_fetch_assoc($result);
 
 
 $m = $m17 + 1 - 1;
+$monate = array(
+    'uuuuppps',
+    'Januar',
+    'Februar',
+    'März',
+    'April',
+    'Mai',
+    'Juni',
+    'Juli ',
+    'August',
+    'September',
+    'Oktober',
+    'November',
+    'Dezember',
+);
 for ($i = 0; $i < $monatsdauer; $i++){
-    
+
     echo "<tr>";
-    echo"<td>" . $m .  "</td>";
+    echo"<td>"  . $monate[$m] .   "</td>";
     echo"<td> bezahlt </td>";
     echo"<td>" . $miete[] = $row['Miete']; "</td>";
     echo "</tr>";
-    if ($m < 13){
+    if ($m < 12){
         $m++;
     }else{
         $m=1;
