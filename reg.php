@@ -127,7 +127,7 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
         header("location: registrieren.php");
     } else {
         $name = trim($_POST['regusername']);
-        $regpw = md5(trim($_POST['regpassword']));
+        $regpw = sha1(trim($_POST['regpassword']));
         $regmail= trim($_POST['regemail']);
            
         

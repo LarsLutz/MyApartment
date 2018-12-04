@@ -69,7 +69,7 @@
                         user
                 WHERE
                         username = '".(trim($_POST['username']))."' AND
-                        passwort = '".md5(trim($_POST['password']))."'
+                        passwort = '".sha1(trim($_POST['password']))."'
                ";
         $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
         // wird die ID des Users geholt und der User damit eingeloggt
