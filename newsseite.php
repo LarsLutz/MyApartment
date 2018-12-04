@@ -77,7 +77,7 @@ include_once 'deletenews.php';
 						<div class="inner">
 							<section>
 								<h2>Kontakt</h2>
-								<form method="post" action="#">
+								<form method="post" action="mail.php">
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" />
@@ -90,7 +90,7 @@ include_once 'deletenews.php';
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
+										
 									</ul>
 								</form>
 							</section>

@@ -72,7 +72,7 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Senden" class="primary" /></li>
+										<li><input  name="mailsend" id="mailsend" type="submit" value="Senden" class="primary" /></li>
 									</ul>
 								</form>
 							</section>
