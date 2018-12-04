@@ -1,8 +1,8 @@
 <?php
 
-$empfaenger = $_POST[pwemail];
+$empfaenger = "admin.bclaufen.ch";
 $betreff = "Ihr neues Paswort";
-$from = "From: My Apartment <absender@domain.de>";
+$from = "From: ".$_POST["name"]. "<admin.bclaufen.ch>";
 $text = "Hier ist ihr neues PW '.$randpw.'";
  
 mail($empfaenger, $betreff, $text, $from);
