@@ -54,8 +54,7 @@ include "autologout.php";
             <div id="main">
                 <div class="inner">
 
-                    <h1>Mieterspiegel</h1>
-                    <span class="image main"><img src="images/pic13.jpg" alt="" /></span>                    
+                    <h1>Mieterspiegel</h1>                  
                     <div class="table-wrapper">
                         <table class="alt">
                             <?php include_once 'TabelleDBtest.php'; ?>

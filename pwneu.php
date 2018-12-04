@@ -69,9 +69,16 @@ include_once 'autopw.php';
 									</ul>
 								</form>
 							</section>
+                                                    <section>
+
+                        <ul class="icons">
+                            <li><a href="tel:+41627728069" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+                            <li><a href="mailto:admin.bclaufen.ch" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+                        </ul>
+                    </section>
 							
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design:Lars Lutz</li>
+								<li>&copy; FHNW 2018. All rights reserved</li><li>Design:Eduart Bunjaku, Robin Widmer, Lars Lutz</li>
 							</ul>
 						</div>
 					</footer>
