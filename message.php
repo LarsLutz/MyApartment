@@ -1,5 +1,7 @@
 <!DOCTYPE HTML>
-
+<?php
+session_start();
+?>
 <html>
 	<head>
             <title>Password versendet</title>
@@ -31,11 +33,7 @@
 					<div id="main">
 						<div class="inner">
                                                     <h1><?php echo $titel;?></h1>
-                                                    <h2><?php foreach($errors as $error)
-                                                             echo $error;?>
-                                                    </h2>
-                                                    <h3><?php echo $pw;?>
-                                                    </h3
+                                                    <h3><?php  echo $_SESSION['ErrorMSG3']; ?></h3>
                                                     <br>
                                                     <span class="loginlink"><a href="index.php"><b>Weiter</b></a></span>    
                                                     
@@ -74,3 +72,7 @@
 	</body>
 </html>
 
+<?php
+$_SESSION['ErrorMSG3']="";
+    session_destroy();
+?>

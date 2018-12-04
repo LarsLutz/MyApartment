@@ -12,7 +12,7 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
 
     if (!isset($_POST['usernr']) AND ( $_POST['regusername']) AND ( $_POST['regpassword'])AND ( $_POST['regpasswordag'])AND ( $_POST['regemail'])) {
         $errors[] = "Bitte geben sie Ihre Daten ein.";
-        $msg = $msg . "Bitte geben sie Ihre Usernummer ein.";
+        $msg = $msg . " Bitte geben sie Ihre Usernummer ein. /n";
     } else {
        $usrnmr= $_POST['usernr'];
 
@@ -29,14 +29,14 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
 
         if (trim($_POST['usernr']) == '') {
             $errors[] = "Bitte geben Sie Ihre Usernummer ein.";
-            $msg = $msg .= "Bitte geben Sie Ihre Usernummer ein.";
+            $msg = $msg . " Bitte geben Sie Ihre Usernummer ein. \n";
         } elseif (trim($_POST['usernr']) != $row['idPersonen']) {
             $errors[] = "Diese UserID ist nicht vorhanden.";
-            $msg = $msg .= "Diese UserID ist nicht vorhanden.";
+            $msg = $msg ." Diese UserID ist nicht vorhanden. \n";
         }
     }
     if (count($errors)) {
-        $msg = $msg .= "Ihr Konto konnte nicht erstellt werden.<br>\n";
+        $msg = $msg ." Ihr Konto konnte nicht erstellt werden.<br>\n";
 
         $_SESSION['ErrorMSG1'] = "<label>".$msg."</label>";
 
