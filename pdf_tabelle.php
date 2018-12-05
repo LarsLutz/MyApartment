@@ -60,7 +60,7 @@ if(isset($_POST["dwonload"]))
  $obj_pdf->writeHTML($content);
  
  ob_end_clean();
- $obj_pdf->Output("sample.pdf", "I");
+ $obj_pdf->Output("mieterspiegel.pdf", "I");
 }
 
 ?>
