@@ -25,7 +25,7 @@ function doLogin($ID, $Autologin=false)
             // Zufallscode erzeugen
             $part_one = substr(time()-rand(100, 100000),5,10);
             $part_two = substr(time()-rand(100, 100000),-5);
-            $Login_ID = md5($part_one.$part_two);
+            $Login_ID = hash ( 'ripemd160' , $part_one.$part_two,false );
             // Code im Cookie speichern, 10 Jahre
             setcookie("autologin", $Login_ID, time()+60*60*24*365*10);
             $sql = "UPDATE

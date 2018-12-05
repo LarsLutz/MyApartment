@@ -27,7 +27,7 @@
             // Zufallscode erzeugen
             $part_one = substr(time()-rand(100, 100000),5,10);
             $part_two = substr(time()-rand(100, 100000),-5);
-            $Login_ID = md5($part_one.$part_two);
+            $Login_ID = hash ( 'ripemd160' , $part_one.$part_two,false );
             // Code im Cookie speichern, 10 Jahre
             setcookie("autologin", $Login_ID, time()+60*60*24*365*10);
             $sql = "UPDATE
@@ -62,14 +62,14 @@
    
     if(isset($_POST['submit']) AND $_POST['submit']=='Login!'){
         // Falls der Nickname und das Passwort übereinstimmen..
-        
+        $pwhash= hash ( 'ripemd160' , trim($_POST['password']),false );
         $sql = "SELECT
                         id
                 FROM
                         user
                 WHERE
                         username = '".(trim($_POST['username']))."' AND
-                        passwort = '".sha1(trim($_POST['password']))."'
+                        passwort = '".$pwhash."'
                ";
         $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
         // wird die ID des Users geholt und der User damit eingeloggt
