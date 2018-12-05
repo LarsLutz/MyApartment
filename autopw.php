@@ -66,7 +66,7 @@ if (isset($_POST['submit']) AND $_POST['submit'] == 'Senden') {
 
         $empfaenger = $_POST['pwemail'];
         $betreff = "Passwort wurde zurück gesetzt";
-        $from = "From: MyApartment <admin.bclaufen.ch>";
+        $from = "From: MyApartment <admin@bclaufen.ch>";
         $text = "Anbei Ihr neues Passwort: \n"
                 . "Password" . $randpw . "\n"
                 . "Bitte ändern sie das Passwort bei der nächsten Anmeldung!";
