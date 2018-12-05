@@ -27,7 +27,7 @@ if(isset($_POST['pwok']) AND $_POST['pwok'] == 'Ok') {
             }
 
             else {
-                if(trim($row['passwort']) != hash ( 'ripemd160' , trim($_POST['passwordold']),false ))
+                if(trim($row['passwort']) != sh1(trim($_POST['passwordold'])))
                     $errors[]= "Ihr altes Passwort ist nicht korrekt.";
                     $msg= $msg." Ihr altes Passwort ist nicht korrekt. <br>";
                 if(trim($_POST['passwordnew'])==""){
@@ -62,11 +62,10 @@ if(isset($_POST['pwok']) AND $_POST['pwok'] == 'Ok') {
                  
             }
             else{
-                $pwhash= hash ( 'ripemd160' , trim($_POST['passwordnew']),false );
                 $sql = "UPDATE
                                 user
                         SET
-                                passwort ='".$pwhash."'
+                                passwort ='".sh1(trim($_POST['passwordnew']))."'
                         WHERE
                                 id = '".$_SESSION['UserID']."'
                        ";

@@ -62,14 +62,14 @@
    
     if(isset($_POST['submit']) AND $_POST['submit']=='Login!'){
         // Falls der Nickname und das Passwort übereinstimmen..
-        $pwhash= hash ( 'ripemd160' , trim($_POST['password']),false );
+        
         $sql = "SELECT
                         id
                 FROM
                         user
                 WHERE
                         username = '".(trim($_POST['username']))."' AND
-                        passwort = '".$pwhash."'
+                        passwort = '".sha1(trim($_POST['password']))."'
                ";
         $result = mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
         // wird die ID des Users geholt und der User damit eingeloggt

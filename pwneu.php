@@ -1,5 +1,7 @@
 
-
+<?php
+include_once 'autopw.php';
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>

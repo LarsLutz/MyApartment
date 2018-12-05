@@ -32,7 +32,7 @@ session_start();
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-                                                    <h1>Information</h1>
+                                                    <h1><?php echo $titel;?></h1>
                                                     <h3><?php  echo $_SESSION['ErrorMSG3']; ?></h3>
                                                     <br>
                                                     <span class="loginlink"><a href="index.php"><b>Weiter</b></a></span>    

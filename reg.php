@@ -127,10 +127,9 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
         header("location: registrieren.php");
     } else {
         $name = trim($_POST['regusername']);
-        $regpw = hash ( 'ripemd160' , trim($_POST['regpassword']),false );
+        $regpw = sha1(trim($_POST['regpassword']));
         $regmail= trim($_POST['regemail']);
-         
-         
+           
         
          $sql = "INSERT INTO user (username,passwort,email,reg_datum,wohnung)
 		VALUES ('".mysqli_real_escape_string($connid, $name)."','".mysqli_real_escape_string($connid, $regpw)."','".mysqli_real_escape_string($connid, $regmail)."','".time()."','".mysqli_real_escape_string($connid, $wohnung)."'
