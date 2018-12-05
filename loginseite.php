@@ -71,7 +71,7 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Sende" class="primary" /></li>
+										<li><input type="submit" value="Senden" class="primary" /></li>
 									</ul>
 								</form>
 							</section>

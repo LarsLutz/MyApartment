@@ -1,10 +1,10 @@
-<!DOCTYPE HTML>
+
 <?php
 include "isuser.php";
 include 'db.php';
 include "autologout.php";
 ?>
-
+<!DOCTYPE HTML>
 <html>
     <head>
         <title>Mieterspiegel</title>
