@@ -56,16 +56,20 @@
             else{
                 
                 $randpw = chr(rand(65,90)) . chr(rand(65,90))  . rand(0,9) .chr(rand(65,90)) . chr(rand(65,90)) . rand(0,9) . chr(rand(65,90)) . rand(0,9) ; // Zufallspw
-                
+                $pwhash= hash ( 'ripemd160' , trim($randpw),false );
+               $msg=$msg. "Ihre Password wurde ge&auml;ndert! Sie erhalten in k&uuml;rze eine Mail mit dem neuen Password.";
+               
                 $sql = "UPDATE
                                 user
                         SET
-                                passwort ='".sh1(trim($randpw))."'
+                                passwort ='".$pwhash."'
                         WHERE
                                 email = '".$_POST['pwemail']."'
                        ";
                 mysqli_query($connid,$sql) OR die("<pre>\n".$sql."</pre>\n".mysqli_error());
-               // include_once 'mail.php';
+               
+                 $_SESSION['ErrorMSG3'] = "<label>".$msg."  //".$randpw."</label>";
+                 
                 $titel= "Wechsel erfolgeich! Sie erhalten in kürze eine E-Mail mit dem neuen Passwort";
                 
                 $empfaenger = $_POST['pwemail'];
