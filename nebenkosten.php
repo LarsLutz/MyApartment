@@ -46,7 +46,7 @@ include "nebenkosten_sql.php";
                     <li><a href="nebenkosten.php">Nebenkosten</a></li>
                     <li><a href="newsseite.php">News</a></li>
                     <li><a href="mietrechnung.php">Mietrechnung</a></li>
-                    <li><a href="hausordnung.pdf">Hausordnung</a></li>
+                    <li><a target ="_blank" href="hausordnungpdf.php">Hausordnung</a></li>
                     <li><a href="userconf.php">Einstellungen</a></li>
                     <li><a href="logout.php"><b>Logout</b></a></li>
                 </ul>

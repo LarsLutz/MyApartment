@@ -11,14 +11,13 @@ ob_start();
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Eduart Bunjaku, Lars Lutz, Robin Widmer');
 $pdf->SetTitle('Hausordnung');
-//$pdf->SetSubject('TCPDF Tutorial');
 $pdf->SetKeywords('MyApartment, Hausordnung');
 
-// set default header data
+// Standard Daten setzen
 $pdf->SetHeaderData('', '', "MyApartment", "");
 $pdf->setFooterData(array(0,64,0), array(0,64,128));
 
-// set header and footer fonts
+// Kopf -und Fussdaten Schrift
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
 $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
@@ -41,56 +40,38 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 // set default font subsetting mode
 $pdf->setFontSubsetting(true);
 
-// Set font
-// dejavusans is a UTF-8 Unicode font, if you only need to
-// print standard ASCII chars, you can use core fonts like
-// helvetica or times to reduce file size.
+// Schrift in der PDF Datei
 $pdf->SetFont('helvetica', '', 14, '', true);
 
 // Add a page
 // This method has several options, check the source code documentation for more information.
 $pdf->AddPage();
 
-// Text wirft Schatten ab
-//$pdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'color'=>array(196,196,196), 'opacity'=>1, 'blend_mode'=>'Normal'));
 
 // Inhalt, der angezeigt werden soll
 $html = <<<EOD
         <style>
-        .schrift{
-            font-weight: normal;
-            font-size: 12px;
-        }
+
+            h1{
+                font-size: 16px;
+                font-family: helvetica;
+            }
         
-        h1{
-        font-size: 16px;
-        font-family: helvetica;
-        }
+            h2{
+                font-size: 12px;
+                font-weight: bold;
+                font-family: helvetica;
+            }
         
-        h2{
-            font-size: 12px;
-            font-weight: bold;
-            font-family: helvetica;
-        }
-        
-        p{
-            font-size: 12px;
-            font-family: helvetica;
-            text-align: justify;
-        
-        ul{
-        margin: 0;
-        padding:0;
-        }
-         li{
-        margin: 0;
-        padding:0;
-        }
-        
-        
+            p{
+                font-size: 12px;
+                font-family: helvetica;
+                text-align: justify;
+                column-count:2;
+            }
         </style>
         
-        <h1 style = "font-size: 16px";><tab>Hausordnung</h1>
+        <h1><tab>Hausordnung</h1>
         <h2>1. Rücksichtname</h2>
         <p >Im Interesse eines guten Verhältnisses unter den Mietern verpflichten sich 
             alle zu gegenseitiger Rücksichtnahme. Der Mieter ist dafür besorgt, dass sich die Mitbewohner 
@@ -172,13 +153,7 @@ $html = <<<EOD
            Verwaltung oder des Hauswartes zu befolgen. Sofern der Unterhalt und die 
            Reinigung der Umgebung Sache der Mieter ist, wird eine spezielle Gartenordnung 
            aufgestellt.</p>
-        
-        
-        
-        
-        
-        
-        
+    
 EOD;
 
 // gibt den Text aus
@@ -190,9 +165,4 @@ $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
 // This method has several options, check the source code documentation for more information.
 ob_end_clean();
 $pdf->Output('Hausordnung.pdf', 'I');
-
-
-//============================================================+
-// END OF FILE
-//============================================================+
 
