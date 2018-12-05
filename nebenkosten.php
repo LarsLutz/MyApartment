@@ -91,7 +91,7 @@ include "nebenkosten_sql.php";
                             <rect x="50" y="250" width="<?php echo $parkplatz2018[] = $row4['betrag']; ?>" height="50" rx="3" ry ="3" fill="#f91800" />
 
                             <text x="0" y="380" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $wasserverbrauch2018[] = $row6['betrag']; ?> </text>
-                            <rect x="50" y="350" width="<?php echo $wasserverbrauch2018[] = $row6['betrag']; ?>" height="50" rx="3" ry ="3" fill="#4be530" style="width:100%"/>
+                            <rect x="50" y="350" width="<?php echo $wasserverbrauch2018[] = $row6['betrag']; ?>" height="50" rx="3" ry ="3" fill="#4be530"/>
 
                             <rect x="22" y="470" width="25" height="25" rx="3" ry="3" fill="#efeb09" />
                             <text x="70" y="490" font-size:0.6em font-family="Arial" fill="#404040">Heizkosten </text>
@@ -111,7 +111,7 @@ include "nebenkosten_sql.php";
                     
                     
                         <div id="2017" style="display:none"> 
-                            <svg id="statSvg" width="1500" height="650">
+                            <svg id="statSvg" width="100%" height="650">
                             <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $heizkosten2017[] = $row8['betrag']; ?> </text>
                             <rect x="50" y="50" width="<?php echo $heizkosten2017[] = $row8['betrag']; ?>" height="50" rx="3" ry="3" fill="#efeb09" />
 
