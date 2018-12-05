@@ -35,7 +35,7 @@ error_reporting(E_ALL);
     // Session löschen
     session_destroy();
     include_once 'dbclose.php';
-    header("location: index.php");
+    header("location: loginseite.php");
     
 	?>
 

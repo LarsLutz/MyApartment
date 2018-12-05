@@ -17,7 +17,7 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="index.php" class="logo">
                                                                     <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Login MyApartment</span>
 								</a>
 
@@ -67,11 +67,11 @@
 											<input type="email" name="email" id="email" placeholder="Email" />
 										</div>
 										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
+											<textarea name="message" id="message" placeholder="Nachricht"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
+										<li><input type="submit" value="Sende" class="primary" /></li>
 									</ul>
 								</form>
 							</section>

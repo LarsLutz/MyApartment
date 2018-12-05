@@ -10,6 +10,7 @@ include "autologout.php";
     <head>
         <title>Einstellungen</title>
         <meta charset="utf-8" />
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -139,13 +140,6 @@ include "autologout.php";
                                 <li><a href="mailto:admin.bclaufen.ch" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
                             </ul>
                         </section>
-                    </section>
-                    <section>
-
-                        <ul class="icons">
-                            <li><a href="tel:+41627728069" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-                            <li><a href="mailto:admin.bclaufen.ch" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-                        </ul>
                     </section>
 
                     <ul class="copyright">
