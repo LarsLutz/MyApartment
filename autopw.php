@@ -79,8 +79,3 @@ if (isset($_POST['submit']) AND $_POST['submit'] == 'Senden') {
     header("location: message.php");
 }
 ?> 
-
-
-
-
-

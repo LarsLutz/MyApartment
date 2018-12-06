@@ -127,16 +127,17 @@ if (isset($_POST['regok']) AND $_POST['regok'] == 'Registrieren') {
         header("location: registrieren.php");
     } else {
         $name = trim($_POST['regusername']);
+        $perid= trim($_POST['usernr']);
         $regpw = hash ( 'ripemd160' , trim($_POST['regpassword']),false );
         $regmail= trim($_POST['regemail']);
            
         
-         $sql = "INSERT INTO user (username,passwort,email,reg_datum,wohnung)
-		VALUES ('".mysqli_real_escape_string($connid, $name)."','".mysqli_real_escape_string($connid, $regpw)."','".mysqli_real_escape_string($connid, $regmail)."','".time()."','".mysqli_real_escape_string($connid, $wohnung)."'
+         $sql = "INSERT INTO user (username,idPersonen,passwort,email,reg_datum,wohnung)
+		VALUES ('".mysqli_real_escape_string($connid, $name)."','".mysqli_real_escape_string($connid, $perid)."','".mysqli_real_escape_string($connid, $regpw)."','".mysqli_real_escape_string($connid, $regmail)."','".time()."','".mysqli_real_escape_string($connid, $wohnung)."'
 		)";
           mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
         
-        header("location: registrieren.php");
+        header("location: loginseite.php");
     }
     
     

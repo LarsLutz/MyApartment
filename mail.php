@@ -7,4 +7,5 @@ $text = $_POST["message"];
  
 mail($empfaenger, $betreff, $text, $from);
 }
+header('Location:'.$_SERVER['HTTP_REFERER']);
 ?>
