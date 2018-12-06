@@ -8,4 +8,3 @@ $text = $_POST["message"];
 mail($empfaenger, $betreff, $text, $from);
 }
 ?>
-
