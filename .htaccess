@@ -1,11 +1,7 @@
 RewriteEngine on
-RewriteRule ^\.htaccess$ - [F]
+RewriteRule ^\.htaccess$ -[F]
 RewriteCond %{SERVER_PORT} !^443$ 
 RewriteRule (.*) https://%{HTTP_HOST}/$1 [R=301,L]
 
-ErrorDocument 404-fehlerseite.php
-ErrorDocument 500 404-fehlerseite.php
-
-RewriteBase /
-RewriteRule ^ ([-0-9a-z]+)/([0-9]+).html$ index.php?id=$1
-
+ErrorDocument 404 ./404-fehlerseite.php
+ErrorDocument 500 ./404-fehlerseite.php

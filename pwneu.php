@@ -60,11 +60,11 @@
 											<input type="email" name="email" id="email" placeholder="Email" />
 										</div>
 										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
+											<textarea name="message" id="message" placeholder="Nachricht"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										 <li><input  name="mailsend" id="mailsend" type="submit" value="Senden" class="primary" /></li>
+										<li><input type="submit" name="mailsend" value="Senden" class="primary" /></li>
 									</ul>
 								</form>
 							</section>

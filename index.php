@@ -134,7 +134,7 @@ include "autologout.php";
 						<div class="inner">
 							<section>
 								<h2>Kontakt</h2>
-								<form method="post" action="mail.php">
+                                                                <form method="post" action="mail.php">
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" />
@@ -147,7 +147,7 @@ include "autologout.php";
 										</div>
 									</div>
 									<ul class="actions">
-                                                                            <li><input  name="mailsend" id="mailsend" type="submit" value="Senden" class="primary" /></li>
+										<li><input type="submit" name="mailsend" value="Senden" class="primary" /></li>
 									</ul>
 								</form>
 							</section>

@@ -108,8 +108,8 @@ include "nebenkosten_sql.php";
                             <line x1="51" y1="10" x2="51" y2="450" stroke-width="2" stroke="#808080" />
                             </svg>
                         </div>
-                    
-                    
+
+
                         <div id="2017" style="display:none"> 
                             <svg id="statSvg" width="100%" height="650">
                             <text x="0" y="80" font-size:0.8em font-family="Arial" fill="#404040"><?php echo $heizkosten2017[] = $row8['betrag']; ?> </text>
@@ -139,8 +139,8 @@ include "nebenkosten_sql.php";
                             <line x1="51" y1="10" x2="51" y2="450" stroke-width="2" stroke="#808080" />
                             </svg>
                         </div>
-                    
-                       </div>
+
+                    </div>
 
                 </div>
             </div>
@@ -163,7 +163,7 @@ include "nebenkosten_sql.php";
                                 </div>
                             </div>
                             <ul class="actions">
-                                <li><input  name="mailsend" id="mailsend" type="submit" value="Senden" class="primary" /></li>
+                                <li><input type="submit" name="mailsend" value="Senden" class="primary" /></li>
                             </ul>
                         </form>
                     </section>
