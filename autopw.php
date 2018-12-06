@@ -65,11 +65,12 @@ if (isset($_POST['submit']) AND $_POST['submit'] == 'Senden') {
         $titel = "Wechsel erfolgeich! Sie erhalten in kürze eine E-Mail mit dem neuen Passwort";
 
         $empfaenger = $_POST['pwemail'];
-        $betreff = "Passwort wurde zurück gesetzt";
+        $betreff = "Ihr Passwort wurde zurückgesetzt";
         $from = "From: MyApartment <admin@bclaufen.ch>";
         $text = "Anbei Ihr neues Passwort: \n"
-                . "Password" . $randpw . "\n"
-                . "Bitte ändern sie das Passwort bei der nächsten Anmeldung!";
+                ."\n"
+                . "Password: " . $randpw . "\n"
+                . "Bitte ändern Sie das Passwort bei der nächsten Anmeldung!";
 
         mail($empfaenger, $betreff, $text, $from);
 
