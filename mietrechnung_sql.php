@@ -89,7 +89,4 @@ for ($i = 0; $i < $monatsdauer; $i++){
     }
             
 }
-
-
-
-
+?>
