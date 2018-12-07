@@ -2,6 +2,7 @@
 include "isuser.php";
 include 'db.php';
 include "autologout.php";
+include "mietvertrag_sql.php"
 ?>
 
 
@@ -52,6 +53,7 @@ include "autologout.php";
                     <li><a href="mievertrag.php">Mietvertrag</a></li>
                     <li><a href="userconf.php">Einstellungen</a></li>
                     <li><a href="logout.php"><b>Logout</b></a></li>
+
                     
                 </ul>
             </nav>
@@ -59,25 +61,95 @@ include "autologout.php";
             <!-- Main -->
             <div id="main">
                 <div class="inner">
-                    <h1>Mietrechnung</h1>
+                    <h1>Mietvertrag</h1>
                     <span class="image main"><img alt="" /></span>
                     <div class="table-wrapper">
-
-
-
+                        <b>Angaben des Mieters:</b><br/><br/> 
                         <table>
-                            <thead>
-                                <tr>
-                                    <th>Monat</th>
-                                    <th>offen/bezahlt</th>
-                                    <th>Betrag</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php include_once 'mietrechnung_sql.php' ?>
+                        <tr>
+                            <td>Name:</td>
+                            <td><?php echo $mietvnachname[] = $rows1['name']; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Vorname:</td>
+                            <td><?php echo $mietvvorname[] = $rows2['vorname'];?></td>
 
-                            </tbody>
+                        </tr>
+                        <tr>
+                            <td>Geburtsdatum:</td>
+                            <td><?php echo $mietvgeburtsdatum[] = $rows3['geburtsdatum'];?></td>
+                        </tr>
+                        <tr>
+                            <td>Telefon:</td>
+                            <td><?php echo $mietvtel[] = $rows4['tel'];?></td>
+                        </tr>
+                        <tr>
+                            <td>Strasse:</td>
+                            <td>Hauptstrasse 34</td>
+                        </tr>
+                        <tr>
+                            <td>PLZ:</td>
+                            <td>5000 Aarau</td>
+                        </tr>
+                        </table><br/><br/>
+                        
+                        <b>Angaben des Vermieters:</b><br/><br/> 
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td>Müller</td>
+                            </tr>
+                            <tr>
+                                <td>Vorname:</td>
+                                <td>Friedolin</td>
+                            </tr>
+                            <tr>
+                                <td>Geburtsdatum:</td>
+                                <td>1950-12-08</td>
+                            </tr>
+                            <tr>
+                                <td>Telefon:</td>
+                                <td>621288245</td>
+                            </tr>
+                            <tr>
+                                <td>Strasse:</td>
+                                <td>Hauptstrasse 34</td>
 
+                            </tr>
+                            <tr>
+                                <td>PLZ:</td>
+                                <td>5000 Aarau</td>
+
+                            </tr>
+                        </table>
+                        
+                        <b>Angaben zum Mietobjekt</b><br/><br/> 
+                        <table>
+                            <tr>
+                                <td>Mietzins:</td>
+                                <td><?php echo $mietvzins[] = $rows6['miete']; ?></td>
+                            </tr>
+                            <tr>
+                                <td>Fläche:</td>
+                                <td><?php echo $mietvflaeche[] = $rows7['flaeche'];?></td>
+                            </tr>
+                            <tr>
+                                <td>Grösse:</td>
+                                <td><?php echo $mietvzimmer[] = $rows8['groesse'];?></td>
+
+                            </tr>
+                            <tr>
+                                <td>Stockwerk:</td>
+                                <td><?php echo $mietvstockwerk[] = $rows9['stockwerk'];?></td>
+                            </tr>
+                            <tr>
+                                <td>Nebenkosten:</td>
+                                <td><?php echo $mietvnebenkosten[] = $rows10['betrag'];?></td>
+                            </tr>
+                            <tr>
+                                <td>Einzugsdatum:</td>
+                                <td><?php echo $mietveinzugsdatum[] = $rows11['einzugsdatum'];?></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
