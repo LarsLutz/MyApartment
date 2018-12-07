@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
 <?php
 session_start();
 ?>
+<!DOCTYPE HTML>
 <html>
     <head>
         <title>Registrieren</title>
@@ -60,7 +60,7 @@ session_start();
                         <span class="loginlink"><a href="loginseite.php"><b>Zur&uumlck</b></a></span>
                     </div>
                     <?php
-                    if ($_SESSION["ErrorMSG1"] != "" or $_SESSION['ErrorMSG2'] != "") {
+                    if ($_SESSION["ErrorMSG1"] != "" OR $_SESSION['ErrorMSG2'] != "") {
                         echo '<div class= "msgbox">';
                         echo $_SESSION['ErrorMSG1'];
                         echo $_SESSION['ErrorMSG2'];
