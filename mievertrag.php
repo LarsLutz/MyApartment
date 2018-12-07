@@ -2,7 +2,7 @@
 include "isuser.php";
 include 'db.php';
 include "autologout.php";
-include "mietvertrag_sql.php"
+include "mietvertrag_sql.php";
 ?>
 
 
