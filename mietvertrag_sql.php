@@ -4,7 +4,7 @@ include_once 'db.php';
 //
 //alli sql php sache före mietvertrag
 //
-//<?php echo $mietvnachname[] = $row1['name']; 
+//<?php echo $mietvnachname[] = $rows1['name']; 
 //<?php echo $mietvvorname[] = $rows2['vorname'];
 //<?php echo $mietvgeburtsdatum[] = $rows3['geburtsdatum'];
 //<?php echo $mietvtel[] = $rows4['tel'];
@@ -38,9 +38,9 @@ $sql = "SELECT
                                  Wohnungen_idGebaeude = '" . $wohnung[] = $row['wohnung'] . "'";
                                      
 $result1 = mysqli_query($connid, $sql) OR die("<pre>\n" . $sql . "</pre>\n" . mysqli_error());
-$row1 = mysqli_fetch_assoc($result1);
+$rows1 = mysqli_fetch_assoc($result1);
 
- //<?php echo $mietvnachname[] = $row1['name'];
+ //<?php echo $mietvnachname[] = $rows1['name'];
 
 
 //vorname
