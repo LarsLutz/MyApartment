@@ -1,5 +1,5 @@
 <?php
-
+// adaptiert von http://www.schweizerischer-mieterschutz.ch/documents/Hausordnung.pdf
 
 require_once("tcpdf/tcpdf.php");
 
@@ -31,9 +31,6 @@ $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 // set auto page breaks
 $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
-// set image scale factor
-//$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // ---------------------------------------------------------
 

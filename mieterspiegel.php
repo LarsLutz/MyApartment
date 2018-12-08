@@ -61,7 +61,7 @@ include "autologout.php";
                             <?php include_once 'tabelledbabfrage.php'; ?>
                         </table>
 
-                        <form action ="pdf_tabelle.php"method="post">
+                        <form target="_blank" action ="pdf_tabelle.php"method="post">
                             <input type="submit" name="dwonload" value="Download Mieterspiegel" />   
                         </form>
                     </div>
