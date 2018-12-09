@@ -21,31 +21,30 @@ $pdf->setFooterData(array(0,64,0), array(0,64,128));
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
 $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
-// set default monospaced font
+// Standard Monofont
 $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
-// set margins
+// Seitenränder festlegen
 $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
 $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
-// set auto page breaks
+// Automatischer Zeilenumbruch
 $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 
 // ---------------------------------------------------------
 
-// set default font subsetting mode
+// Standardschriftarten einstellen
 $pdf->setFontSubsetting(true);
 
 // Schrift in der PDF Datei
 $pdf->SetFont('helvetica', '', 14, '', true);
 
-// Add a page
-// This method has several options, check the source code documentation for more information.
+// Seite hinzufügen
 $pdf->AddPage();
 
 
-// Inhalt, der angezeigt werden soll
+// HTML-Inhalt, der angezeigt werden soll, wird in eine PHP-Variablen gespeichert
 $html = <<<EOD
         <style>
 
@@ -158,8 +157,9 @@ $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
 
 // ---------------------------------------------------------
 
-// Close and output PDF document
-// This method has several options, check the source code documentation for more information.
+// Löscht den Ausgabe-Puffer und deaktiviert die Ausgabe-Pufferung.
 ob_end_clean();
-$pdf->Output('Hausordnung.pdf', 'I');
 
+// PDF wird in Vorschau angezeigt und der Ort, wo das File gespeichert werden soll,
+// kann ausgewählt werden
+$pdf->Output('Hausordnung.pdf', 'I');
