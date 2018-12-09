@@ -1,5 +1,5 @@
 <?php
-
+// adaptiert vom unterricht
 $abfrage = "SELECT `personen`.`Name`, `personen`.`Vorname`, `personen`.`Email`, `wohnungen`.`Stockwerk`
 FROM `personen` JOIN `wohnungen` ON `personen`.`wohnungen_idGebaeude` = `wohnungen`.`idGebaeude` ";
 
