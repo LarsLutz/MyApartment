@@ -1,4 +1,5 @@
 <?php
+// adaptiert von https://www.youtube.com/watch?v=m50DZkIwd-s&t=311s
 function fetch_data()
 {
     include_once 'db.php';
